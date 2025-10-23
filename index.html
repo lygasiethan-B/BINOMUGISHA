@@ -1,0 +1,1256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BINOMUGISHA | Video Production & Photography | African Storytelling</title>
+    <meta name="description" content="Nathan Binomugisha - African visual storyteller, video producer & photographer. Creating impactful documentaries and visual content across Uganda and beyond.">
+    <meta name="keywords" content="African storytelling, video production Uganda, photography Kampala, documentary filmmaker, visual storytelling, communications consultant">
+    <meta name="author" content="Nathan Binomugisha">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="BINOMUGISHA | Video Production & Photography">
+    <meta property="og:description" content="African visual storyteller creating impactful documentaries and visual content">
+    <meta property="og:type" content="website">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Color Variables - EASILY CUSTOMIZABLE */
+        :root {
+            --sunset-orange: #E25822;
+            --earth-brown: #A8431A;
+            --sunlight-yellow: #F0B429;
+            --savanna-green: #5F8D37;
+            --charcoal: #333333;
+            --warm-grey: #777777;
+            --off-white: #FDF6E3;
+            --netflix-black: #141414;
+            --netflix-dark-gray: #2F2F2F;
+            --netflix-red: #E50914;
+        }
+        
+        /* CONTENT VARIABLES - UPDATE THESE EASILY */
+        :root {
+            /* Personal Information */
+            --email: "binomugishacom@gmail.com";
+            --whatsapp: "+256756180429";
+            --location: "Bukoto - Kisasai Road, Kampala, Uganda";
+            --year: "2025";
+            
+            /* Video Categories */
+            --category1: "Documentaries";
+            --category2: "Short Films";
+            --category3: "Campaign Videos";
+            --category4: "Community Stories";
+            
+            /* Video Links - REPLACE WITH ACTUAL VIDEO LINKS */
+            --video1-thumb: "https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80";
+            --video1-url: "https://www.youtube.com/embed/dQw4w9WgXcQ";
+            --video1-title: "Hello World: Digital Inclusion";
+            --video1-desc: "Documentary exploring digital divide solutions in rural Uganda through community-led connectivity.";
+            
+            --video2-thumb: "https://images.unsplash.com/photo-1551135049-8a33b42738b4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80";
+            --video2-url: "https://www.youtube.com/embed/dQw4w9WgXcQ";
+            --video2-title: "Women in Engineering";
+            --video2-desc: "Highlighting the 'Women in Engineering' mentorship program and their work building digital Hubs in underserved communities.";
+            
+            --video3-thumb: "https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80";
+            --video3-url: "https://www.youtube.com/embed/dQw4w9WgXcQ";
+            --video3-title: "World Renew: Health & Agriculture";
+            --video3-desc: "Documenting the impact of health, agriculture, and livelihood programs in Ugandan communities.";
+            
+            --video4-thumb: "https://images.unsplash.com/photo-1523580494863-6f3031224c94?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80";
+            --video4-url: "https://www.youtube.com/embed/dQw4w9WgXcQ";
+            --video4-title: "Let Me Learn UN Campaign";
+            --video4-desc: "Video stories collected for TheirWorld's 'Let Me Learn' campaign showcased at the UN Education Summit.";
+            
+            --video5-thumb: "https://images.unsplash.com/photo-1557804506-669a67965ba0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80";
+            --video5-url: "https://www.youtube.com/embed/dQw4w9WgXcQ";
+            --video5-title: "Sawa World: Grassroots Solutions";
+            --video5-desc: "Stories of local changemakers implementing innovative solutions to poverty in their communities.";
+            
+            --video6-thumb: "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80";
+            --video6-url: "https://www.youtube.com/embed/dQw4w9WgXcQ";
+            --video6-title: "Patriotism Corps Initiatives";
+            --video6-desc: "Multimedia stories highlighting patriotism, national values, and civic engagement across Uganda.";
+            
+            /* Photo Links - REPLACE WITH ACTUAL PHOTO LINKS */
+            --photo1: "https://example.com/photo1.jpg";
+            --photo2: "https://example.com/photo2.jpg";
+            --photo3: "https://example.com/photo3.jpg";
+            --photo4: "https://example.com/photo4.jpg";
+            --photo5: "https://example.com/photo5.jpg";
+            --photo6: "https://example.com/photo6.jpg";
+            --photo7: "https://example.com/photo7.jpg";
+            --photo8: "https://example.com/photo8.jpg";
+        }
+        
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Montserrat', sans-serif;
+        }
+        
+        body {
+            background-color: var(--netflix-black);
+            color: white;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        /* Header Styles */
+        header {
+            background: linear-gradient(to bottom, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0) 100%);
+            color: white;
+            padding: 1.5rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            transition: background-color 0.3s;
+        }
+        
+        header.scrolled {
+            background-color: var(--netflix-black);
+        }
+        
+        .logo {
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            letter-spacing: 1px;
+            color: var(--sunset-orange);
+            text-align: center;
+        }
+        
+        .tagline {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            font-weight: 300;
+            text-align: center;
+        }
+        
+        /* Navigation Styles */
+        nav {
+            background-color: transparent;
+            position: sticky;
+            top: 120px;
+            z-index: 100;
+            padding: 0 1.5rem;
+        }
+        
+        .nav-container {
+            display: flex;
+            justify-content: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: rgba(20, 20, 20, 0.8);
+            border-radius: 5px;
+            padding: 0.5rem;
+        }
+        
+        .nav-btn {
+            padding: 0.8rem 1.5rem;
+            background: none;
+            border: none;
+            font-size: 1rem;
+            font-weight: 500;
+            color: #e5e5e5;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            outline: none;
+            border-radius: 4px;
+        }
+        
+        .nav-btn:hover {
+            color: white;
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+        
+        .nav-btn.active {
+            color: white;
+            background-color: var(--sunset-orange);
+        }
+        
+        /* Page Container */
+        .page-container {
+            max-width: 100%;
+            margin-top: 120px;
+            padding: 0;
+        }
+        
+        /* Page Styles */
+        .page {
+            display: none;
+            animation: fadeIn 0.5s ease;
+        }
+        
+        .page.active {
+            display: block;
+        }
+        
+        .page-title {
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            color: white;
+            font-weight: 600;
+            padding: 0 4%;
+        }
+        
+        /* Home Page Styles */
+        #home {
+            padding-bottom: 3rem;
+        }
+        
+        .hero {
+            position: relative;
+            height: 80vh;
+            display: flex;
+            align-items: center;
+            padding: 0 4%;
+            margin-bottom: 2rem;
+            background: linear-gradient(to right, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.4) 50%, rgba(0,0,0,0.8) 100%), 
+                        url('https://images.unsplash.com/photo-1518638150340-f706e86654de?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1167&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .hero-content {
+            max-width: 600px;
+        }
+        
+        .hero h2 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            color: white;
+            font-weight: 700;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        
+        .hero p {
+            font-size: 1.4rem;
+            margin-bottom: 2rem;
+            color: #e5e5e5;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: var(--sunset-orange);
+            color: white;
+            padding: 0.8rem 1.8rem;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            font-size: 1.1rem;
+            margin-right: 1rem;
+        }
+        
+        .btn:hover {
+            background-color: var(--earth-brown);
+            transform: translateY(-2px);
+        }
+        
+        .btn-whatsapp {
+            background-color: #25D366;
+        }
+        
+        .btn-whatsapp:hover {
+            background-color: #128C7E;
+        }
+        
+        .btn-outline {
+            background-color: transparent;
+            border: 1px solid rgba(255, 255, 255, 0.7);
+        }
+        
+        .btn-outline:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+        
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+            padding: 0 4%;
+        }
+        
+        .feature-card {
+            background: var(--netflix-dark-gray);
+            border-radius: 4px;
+            padding: 1.5rem;
+            transition: transform 0.3s ease;
+            border-top: 4px solid var(--sunset-orange);
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .feature-icon {
+            font-size: 2.5rem;
+            color: var(--sunset-orange);
+            margin-bottom: 1rem;
+        }
+        
+        .feature-card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            color: white;
+            font-weight: 600;
+        }
+        
+        .feature-card p {
+            color: #b3b3b3;
+        }
+        
+        /* NETFLIX-STYLE VIDEO PAGE */
+        #videos {
+            padding-bottom: 3rem;
+        }
+        
+        .video-hero {
+            position: relative;
+            height: 70vh;
+            display: flex;
+            align-items: flex-end;
+            padding: 0 4% 4%;
+            margin-bottom: 2rem;
+            background: linear-gradient(to top, var(--netflix-black) 0%, transparent 50%), 
+                        url('https://images.unsplash.com/photo-1518638150340-f706e86654de?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1167&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .video-hero-content {
+            max-width: 600px;
+        }
+        
+        .video-hero h2 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: white;
+            font-weight: 700;
+        }
+        
+        .video-hero p {
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+            color: #e5e5e5;
+        }
+        
+        .video-category {
+            margin-bottom: 3rem;
+            padding: 0 4%;
+        }
+        
+        .category-title {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: white;
+            font-weight: 600;
+        }
+        
+        .video-row {
+            display: flex;
+            overflow-x: auto;
+            overflow-y: hidden;
+            padding: 1rem 0;
+            scrollbar-width: none; /* Firefox */
+            -ms-overflow-style: none; /* IE and Edge */
+        }
+        
+        .video-row::-webkit-scrollbar {
+            display: none; /* Chrome, Safari and Opera */
+        }
+        
+        .video-item {
+            flex: 0 0 auto;
+            width: 300px;
+            margin-right: 10px;
+            border-radius: 4px;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+            position: relative;
+            cursor: pointer;
+        }
+        
+        .video-item:hover {
+            transform: scale(1.05);
+            z-index: 10;
+        }
+        
+        .video-item img {
+            width: 100%;
+            height: 169px; /* 16:9 aspect ratio */
+            object-fit: cover;
+            display: block;
+        }
+        
+        .video-info {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, transparent 100%);
+            padding: 1rem;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .video-item:hover .video-info {
+            opacity: 1;
+        }
+        
+        .video-info h3 {
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+            color: white;
+            font-weight: 600;
+        }
+        
+        .video-info p {
+            font-size: 0.9rem;
+            color: #b3b3b3;
+        }
+        
+        /* Video Modal */
+        .video-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            z-index: 2000;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .video-modal.active {
+            display: flex;
+        }
+        
+        .modal-content {
+            width: 90%;
+            max-width: 1000px;
+            background: var(--netflix-dark-gray);
+            border-radius: 8px;
+            padding: 20px;
+            position: relative;
+        }
+        
+        .close-modal {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            font-size: 2rem;
+            cursor: pointer;
+            color: white;
+            background: rgba(0,0,0,0.5);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 10;
+        }
+        
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            height: 0;
+            overflow: hidden;
+            border-radius: 4px;
+        }
+        
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        
+        .modal-video-info {
+            padding: 1rem 0;
+        }
+        
+        .modal-video-info h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: white;
+        }
+        
+        .modal-video-info p {
+            color: #b3b3b3;
+            font-size: 1rem;
+        }
+        
+        /* Photography Page Styles */
+        #photography {
+            padding: 2rem 4% 4rem;
+        }
+        
+        .photo-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        .photo-item {
+            border-radius: 4px;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+            height: 250px;
+            background-color: var(--netflix-dark-gray);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .photo-item:hover {
+            transform: scale(1.03);
+        }
+        
+        /* About Page Styles */
+        #about {
+            padding: 2rem 4% 4rem;
+        }
+        
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+        
+        .about-text h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            color: white;
+            font-weight: 600;
+        }
+        
+        .about-text p {
+            color: #b3b3b3;
+            margin-bottom: 1rem;
+        }
+        
+        .about-image {
+            background: linear-gradient(135deg, var(--earth-brown) 0%, var(--sunset-orange) 100%);
+            height: 300px;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+        
+        .experience {
+            margin-top: 3rem;
+        }
+        
+        .experience h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            color: white;
+            font-weight: 600;
+        }
+        
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 4px;
+            background-color: var(--sunset-orange);
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -2px;
+        }
+        
+        .timeline-item {
+            padding: 10px 40px;
+            position: relative;
+            width: 50%;
+            box-sizing: border-box;
+        }
+        
+        .timeline-item:nth-child(odd) {
+            left: 0;
+        }
+        
+        .timeline-item:nth-child(even) {
+            left: 50%;
+        }
+        
+        .timeline-content {
+            padding: 20px;
+            background-color: var(--netflix-dark-gray);
+            border-radius: 4px;
+        }
+        
+        .timeline-content h4 {
+            font-weight: 600;
+            color: white;
+            margin-bottom: 0.5rem;
+        }
+        
+        .timeline-content p {
+            color: #b3b3b3;
+            font-size: 0.9rem;
+        }
+        
+        /* Contact Page Styles */
+        #contact {
+            padding: 2rem 4% 4rem;
+        }
+        
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+        }
+        
+        .contact-info h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            color: white;
+            font-weight: 600;
+        }
+        
+        .contact-info p {
+            color: #b3b3b3;
+            margin-bottom: 2rem;
+        }
+        
+        .contact-details {
+            margin-bottom: 2rem;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+        
+        .contact-icon {
+            font-size: 1.5rem;
+            color: var(--sunset-orange);
+            margin-right: 1rem;
+            width: 30px;
+        }
+        
+        .contact-form {
+            background: var(--netflix-dark-gray);
+            padding: 2rem;
+            border-radius: 4px;
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            color: white;
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 0.8rem 1rem;
+            border: 1px solid #404040;
+            border-radius: 4px;
+            font-size: 1rem;
+            transition: border 0.3s ease;
+            background-color: #2F2F2F;
+            color: white;
+        }
+        
+        .form-control:focus {
+            border-color: var(--sunset-orange);
+            outline: none;
+        }
+        
+        textarea.form-control {
+            min-height: 150px;
+            resize: vertical;
+        }
+        
+        /* Footer Styles */
+        footer {
+            background-color: var(--netflix-dark-gray);
+            color: #b3b3b3;
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 3rem;
+        }
+        
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+        
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin: 1.5rem 0;
+        }
+        
+        .social-link {
+            color: #b3b3b3;
+            font-size: 1.5rem;
+            transition: color 0.3s ease;
+        }
+        
+        .social-link:hover {
+            color: var(--sunset-orange);
+        }
+        
+        .copyright {
+            margin-top: 1.5rem;
+            font-size: 0.9rem;
+        }
+        
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .nav-container {
+                flex-wrap: wrap;
+            }
+            
+            .about-content,
+            .contact-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .hero h2 {
+                font-size: 2.5rem;
+            }
+            
+            .video-hero h2 {
+                font-size: 2rem;
+            }
+            
+            .timeline::after {
+                left: 31px;
+            }
+            
+            .timeline-item {
+                width: 100%;
+                padding-left: 70px;
+                padding-right: 25px;
+            }
+            
+            .timeline-item:nth-child(even) {
+                left: 0;
+            }
+            
+            .btn-container {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .btn {
+                margin-right: 0;
+                margin-bottom: 10px;
+            }
+            
+            .video-item {
+                width: 250px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .hero h2 {
+                font-size: 2rem;
+            }
+            
+            .video-hero h2 {
+                font-size: 1.8rem;
+            }
+            
+            .video-item {
+                width: 200px;
+            }
+            
+            .page-title {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header id="mainHeader">
+        <div class="logo">BINOMUGISHA</div>
+        <div class="tagline">Video Production & Photography | African Storytelling</div>
+    </header>
+    
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <button class="nav-btn active" data-page="home">Home</button>
+            <button class="nav-btn" data-page="videos">Videos</button>
+            <button class="nav-btn" data-page="photography">Photography</button>
+            <button class="nav-btn" data-page="about">About</button>
+            <button class="nav-btn" data-page="contact">Contact</button>
+        </div>
+    </nav>
+    
+    <!-- Page Container -->
+    <div class="page-container">
+        <!-- Home Page -->
+        <section id="home" class="page active">
+            <div class="hero">
+                <div class="hero-content">
+                    <h2>African Stories, Told with Impact</h2>
+                    <p>Guiding the next generation of African visual storytellers to create powerful content that transforms communities and drives change.</p>
+                    <div class="btn-container">
+                        <button class="btn" id="viewWorkBtn">View My Work</button>
+                        <a href="https://wa.me/256756180429" class="btn btn-whatsapp" target="_blank">Chat on WhatsApp</a>
+                        <button class="btn btn-outline" id="learnMoreBtn">Learn More</button>
+                    </div>
+                </div>
+            </div>
+            
+            <h2 class="page-title">What I Offer</h2>
+            <div class="features">
+                <div class="feature-card">
+                    <div class="feature-icon">🎬</div>
+                    <h3>Documentary Production</h3>
+                    <p>Creating compelling visual narratives that highlight African stories, challenges, and triumphs with authenticity and impact.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📸</div>
+                    <h3>Photography Services</h3>
+                    <p>Capturing powerful images that tell stories, document events, and showcase the beauty and diversity of African communities.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">👨‍🏫</div>
+                    <h3>Training & Mentorship</h3>
+                    <p>Empowering African creators with practical skills to turn their smartphones into professional video production tools.</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Videos Page -->
+        <section id="videos" class="page">
+            <div class="video-hero">
+                <div class="video-hero-content">
+                    <h2>Documentaries & Video Work</h2>
+                    <p>Explore my collection of short documentaries and video projects that showcase African stories with impact and authenticity.</p>
+                    <button class="btn" id="playFeatured">Play Featured</button>
+                </div>
+            </div>
+            
+            <!-- Documentaries Row -->
+            <div class="video-category">
+                <h3 class="category-title">Documentaries</h3>
+                <div class="video-row">
+                    <div class="video-item" data-video-url="var(--video1-url)" data-video-title="var(--video1-title)" data-video-desc="var(--video1-desc)">
+                        <img src="var(--video1-thumb)" alt="var(--video1-title)">
+                        <div class="video-info">
+                            <h3>var(--video1-title)</h3>
+                            <p>var(--video1-desc)</p>
+                        </div>
+                    </div>
+                    <div class="video-item" data-video-url="var(--video2-url)" data-video-title="var(--video2-title)" data-video-desc="var(--video2-desc)">
+                        <img src="var(--video2-thumb)" alt="var(--video2-title)">
+                        <div class="video-info">
+                            <h3>var(--video2-title)</h3>
+                            <p>var(--video2-desc)</p>
+                        </div>
+                    </div>
+                    <div class="video-item" data-video-url="var(--video3-url)" data-video-title="var(--video3-title)" data-video-desc="var(--video3-desc)">
+                        <img src="var(--video3-thumb)" alt="var(--video3-title)">
+                        <div class="video-info">
+                            <h3>var(--video3-title)</h3>
+                            <p>var(--video3-desc)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Campaign Videos Row -->
+            <div class="video-category">
+                <h3 class="category-title">Campaign Videos</h3>
+                <div class="video-row">
+                    <div class="video-item" data-video-url="var(--video4-url)" data-video-title="var(--video4-title)" data-video-desc="var(--video4-desc)">
+                        <img src="var(--video4-thumb)" alt="var(--video4-title)">
+                        <div class="video-info">
+                            <h3>var(--video4-title)</h3>
+                            <p>var(--video4-desc)</p>
+                        </div>
+                    </div>
+                    <div class="video-item" data-video-url="var(--video5-url)" data-video-title="var(--video5-title)" data-video-desc="var(--video5-desc)">
+                        <img src="var(--video5-thumb)" alt="var(--video5-title)">
+                        <div class="video-info">
+                            <h3>var(--video5-title)</h3>
+                            <p>var(--video5-desc)</p>
+                        </div>
+                    </div>
+                    <div class="video-item" data-video-url="var(--video6-url)" data-video-title="var(--video6-title)" data-video-desc="var(--video6-desc)">
+                        <img src="var(--video6-thumb)" alt="var(--video6-title)">
+                        <div class="video-info">
+                            <h3>var(--video6-title)</h3>
+                            <p>var(--video6-desc)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Community Stories Row -->
+            <div class="video-category">
+                <h3 class="category-title">Community Stories</h3>
+                <div class="video-row">
+                    <div class="video-item" data-video-url="var(--video1-url)" data-video-title="var(--video1-title)" data-video-desc="var(--video1-desc)">
+                        <img src="var(--video1-thumb)" alt="var(--video1-title)">
+                        <div class="video-info">
+                            <h3>var(--video1-title)</h3>
+                            <p>var(--video1-desc)</p>
+                        </div>
+                    </div>
+                    <div class="video-item" data-video-url="var(--video5-url)" data-video-title="var(--video5-title)" data-video-desc="var(--video5-desc)">
+                        <img src="var(--video5-thumb)" alt="var(--video5-title)">
+                        <div class="video-info">
+                            <h3>var(--video5-title)</h3>
+                            <p>var(--video5-desc)</p>
+                        </div>
+                    </div>
+                    <div class="video-item" data-video-url="var(--video3-url)" data-video-title="var(--video3-title)" data-video-desc="var(--video3-desc)">
+                        <img src="var(--video3-thumb)" alt="var(--video3-title)">
+                        <div class="video-info">
+                            <h3>var(--video3-title)</h3>
+                            <p>var(--video3-desc)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Video Modal -->
+        <div class="video-modal" id="videoModal">
+            <div class="modal-content">
+                <span class="close-modal" id="closeModal">&times;</span>
+                <div class="video-container">
+                    <iframe id="videoFrame" src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-video-info">
+                    <h3 id="modalVideoTitle"></h3>
+                    <p id="modalVideoDesc"></p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Photography Page -->
+        <section id="photography" class="page">
+            <h2 class="page-title">Photography Portfolio</h2>
+            <p class="page-content">A visual journey through my photography work, capturing moments, people, and places across Africa.</p>
+            
+            <div class="photo-gallery">
+                <div class="photo-item" style="background-image: url('var(--photo1)')"></div>
+                <div class="photo-item" style="background-image: url('var(--photo2)')"></div>
+                <div class="photo-item" style="background-image: url('var(--photo3)')"></div>
+                <div class="photo-item" style="background-image: url('var(--photo4)')"></div>
+                <div class="photo-item" style="background-image: url('var(--photo5)')"></div>
+                <div class="photo-item" style="background-image: url('var(--photo6)')"></div>
+                <div class="photo-item" style="background-image: url('var(--photo7)')"></div>
+                <div class="photo-item" style="background-image: url('var(--photo8)')"></div>
+            </div>
+        </section>
+        
+        <!-- About Page -->
+        <section id="about" class="page">
+            <h2 class="page-title">About Nathan Binomugisha</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Communications Consultant & Visual Storyteller</h3>
+                    <p>With over 7 years of experience supporting global and local organizations, I help businesses, nonprofits, and leaders communicate clearly and confidently.</p>
+                    <p>I design strategies, build strong brand messages, train teams, and guide organizations through crises. My focus is on practical, easy-to-use solutions that improve teamwork, save time, and create lasting results.</p>
+                    <p>As a proud African creator, I'm dedicated to showcasing authentic stories from the continent while empowering the next generation of visual storytellers.</p>
+                </div>
+                <div class="about-image">
+                    Nathan Binomugisha
+                </div>
+            </div>
+            
+            <div class="experience">
+                <h3>Professional Journey</h3>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <h4>Communications Manager/Consultant</h4>
+                            <p><strong>Project Hello World (via Imagine Her)</strong> | 2022 - Present</p>
+                            <p>Led strategy across 5 countries, managing programs on education, gender equality, and digital inclusion.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <h4>Communications Consultant/Videographer</h4>
+                            <p><strong>World Renew, Uganda</strong> | 2020 - Present</p>
+                            <p>Produced multimedia content for health, agriculture, and livelihood programs.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <h4>Story Editor</h4>
+                            <p><strong>National Secretariat for Patriotism Corps (NSPC)</strong> | 2019 - 2020</p>
+                            <p>Created compelling digital content promoting patriotism and civic engagement.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <h4>Media Director & Video Coordinator</h4>
+                            <p><strong>SAWA WORLD UGANDA</strong> | 2013 - 2018</p>
+                            <p>Led media strategies and content production amplifying grassroots solutions to poverty.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Contact Page -->
+        <section id="contact" class="page">
+            <h2 class="page-title">Get In Touch</h2>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3>Let's Create Something Powerful Together</h3>
+                    <p>Whether you need video production, photography services, or training for your team, I'd love to discuss how we can work together to tell impactful African stories.</p>
+                    
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-icon">📧</div>
+                            <div>
+                                <strong>Email</strong><br>
+                                binomugishacom@gmail.com
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">📞</div>
+                            <div>
+                                <strong>Phone/WhatsApp</strong><br>
+                                +256756180429
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">📍</div>
+                            <div>
+                                <strong>Location</strong><br>
+                                Bukoto - Kisasai Road, Kampala, Uganda
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <a href="https://wa.me/256756180429" class="btn btn-whatsapp" target="_blank">Message on WhatsApp</a>
+                </div>
+                
+                <div class="contact-form">
+                    <form id="contactForm" action="https://formsubmit.co/binomugishacom@gmail.com" method="POST">
+                        <!-- FormSubmit.co Configuration -->
+                        <input type="hidden" name="_subject" value="New contact from BINOMUGISHA website">
+                        <input type="hidden" name="_template" value="table">
+                        <input type="hidden" name="_next" value="https://yourdomain.com/thank-you.html">
+                        
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" name="name" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="_subject" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" class="form-control" required></textarea>
+                        </div>
+                        <button type="submit" class="btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </div>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="logo">BINOMUGISHA</div>
+            <div class="social-links">
+                <a href="#" class="social-link">📘</a>
+                <a href="#" class="social-link">🐦</a>
+                <a href="#" class="social-link">📷</a>
+                <a href="#" class="social-link">💼</a>
+            </div>
+            <div class="copyright">
+                &copy; <span id="currentYear">2025</span> BINOMUGISHA. All rights reserved. | African Stories, Global Impact
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        // Set current year in footer
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+        
+        // Header scroll effect
+        window.addEventListener('scroll', function() {
+            const header = document.getElementById('mainHeader');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+        
+        // Page navigation functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const navButtons = document.querySelectorAll('.nav-btn');
+            const pages = document.querySelectorAll('.page');
+            
+            // Function to switch pages
+            function switchPage(pageId) {
+                // Hide all pages
+                pages.forEach(page => {
+                    page.classList.remove('active');
+                });
+                
+                // Show selected page
+                document.getElementById(pageId).classList.add('active');
+                
+                // Update active nav button
+                navButtons.forEach(button => {
+                    button.classList.remove('active');
+                    if (button.getAttribute('data-page') === pageId) {
+                        button.classList.add('active');
+                    }
+                });
+                
+                // Scroll to top when switching pages
+                window.scrollTo(0, 0);
+            }
+            
+            // Add click event to nav buttons
+            navButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const pageId = this.getAttribute('data-page');
+                    switchPage(pageId);
+                });
+            });
+            
+            // "View My Work" button on home page
+            const viewWorkBtn = document.getElementById('viewWorkBtn');
+            if (viewWorkBtn) {
+                viewWorkBtn.addEventListener('click', function() {
+                    switchPage('videos');
+                });
+            }
+            
+            // "Learn More" button on home page
+            const learnMoreBtn = document.getElementById('learnMoreBtn');
+            if (learnMoreBtn) {
+                learnMoreBtn.addEventListener('click', function() {
+                    switchPage('about');
+                });
+            }
+            
+            // "Play Featured" button on video page
+            const playFeaturedBtn = document.getElementById('playFeatured');
+            if (playFeaturedBtn) {
+                playFeaturedBtn.addEventListener('click', function() {
+                    openVideoModal('var(--video1-url)', 'var(--video1-title)', 'var(--video1-desc)');
+                });
+            }
+            
+            // Video modal functionality
+            const videoModal = document.getElementById('videoModal');
+            const closeModal = document.getElementById('closeModal');
+            const videoFrame = document.getElementById('videoFrame');
+            const modalVideoTitle = document.getElementById('modalVideoTitle');
+            const modalVideoDesc = document.getElementById('modalVideoDesc');
+            const videoItems = document.querySelectorAll('.video-item');
+            
+            // Function to open video modal
+            function openVideoModal(videoUrl, title, description) {
+                videoFrame.src = videoUrl;
+                modalVideoTitle.textContent = title;
+                modalVideoDesc.textContent = description;
+                videoModal.classList.add('active');
+                document.body.style.overflow = 'hidden'; // Prevent scrolling
+            }
+            
+            // Open video modal when clicking on video items
+            videoItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    const videoUrl = this.getAttribute('data-video-url');
+                    const title = this.getAttribute('data-video-title');
+                    const description = this.getAttribute('data-video-desc');
+                    openVideoModal(videoUrl, title, description);
+                });
+            });
+            
+            // Close video modal
+            closeModal.addEventListener('click', function() {
+                videoModal.classList.remove('active');
+                videoFrame.src = '';
+                document.body.style.overflow = 'auto'; // Re-enable scrolling
+            });
+            
+            // Close modal when clicking outside
+            videoModal.addEventListener('click', function(e) {
+                if (e.target === videoModal) {
+                    videoModal.classList.remove('active');
+                    videoFrame.src = '';
+                    document.body.style.overflow = 'auto'; // Re-enable scrolling
+                }
+            });
+            
+            // Close modal with Escape key
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape' && videoModal.classList.contains('active')) {
+                    videoModal.classList.remove('active');
+                    videoFrame.src = '';
+                    document.body.style.overflow = 'auto'; // Re-enable scrolling
+                }
+            });
+        });
+    </script>
+</body>
+</html>
