@@ -16,6 +16,5 @@ A professional portfolio website for Nathan Binomugisha, showcasing African stor
 
 ## 🚀 Live Demo
 
-Visit the live site: [https://yourusername.github.io](https://yourusername.github.io)
-
+Visit the live site: https://lygasiethan-b.github.io/BINOMUGISHA/
 ## 📁 Project Structure
