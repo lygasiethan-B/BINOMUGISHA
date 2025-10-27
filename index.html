@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BINOMUGISHA | Video Production & Photography | African Storytelling</title>
     <meta name="description" content="Nathan Binomugisha - African visual storyteller, video producer & photographer. Creating impactful documentaries and visual content across Uganda and beyond.">
-    <meta name="keywords" content="African storytelling, video production Uganda, photography Kampala, documentary filmmaker, visual storytelling, communications consultant">
+    <meta name="keywords" content="African storytelling, video production Uganda, photography Kampala, documentary filmmaker, visual storytelling, communications consultant, wedding photography Uganda">
     <meta name="author" content="Nathan Binomugisha">    
     
     <!-- For Google Search Console (get code from https://search.google.com/search-console/) -->
@@ -46,62 +46,6 @@
             --netflix-black: #141414;
             --netflix-dark-gray: #2F2F2F;
             --netflix-red: #E50914;
-        }
-        
-        /* CONTENT VARIABLES - UPDATE THESE EASILY */
-        :root {
-            /* Personal Information */
-            --email: "binomugishacom@gmail.com";
-            --whatsapp: "+256756180429";
-            --location: "Bukoto - Kisasai Road, Kampala, Uganda";
-            --year: "2025";
-            
-            /* Video Categories */
-            --category1: "Documentaries";
-            --category2: "Short Films";
-            --category3: "Campaign Videos";
-            --category4: "Community Stories";
-            
-            /* Video Links - REPLACE WITH ACTUAL VIDEO LINKS */
-            --video1-thumb: "https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80";
-            --video1-url: "https://www.youtube.com/embed/dQw4w9WgXcQ";
-            --video1-title: "Hello World: Digital Inclusion";
-            --video1-desc: "Documentary exploring digital divide solutions in rural Uganda through community-led connectivity.";
-            
-            --video2-thumb: "https://images.unsplash.com/photo-1551135049-8a33b42738b4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80";
-            --video2-url: "https://www.youtube.com/embed/dQw4w9WgXcQ";
-            --video2-title: "Women in Engineering";
-            --video2-desc: "Highlighting the 'Women in Engineering' mentorship program and their work building digital Hubs in underserved communities.";
-            
-            --video3-thumb: "https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80";
-            --video3-url: "https://www.youtube.com/embed/dQw4w9WgXcQ";
-            --video3-title: "World Renew: Health & Agriculture";
-            --video3-desc: "Documenting the impact of health, agriculture, and livelihood programs in Ugandan communities.";
-            
-            --video4-thumb: "https://images.unsplash.com/photo-1523580494863-6f3031224c94?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80";
-            --video4-url: "https://www.youtube.com/embed/dQw4w9WgXcQ";
-            --video4-title: "Let Me Learn UN Campaign";
-            --video4-desc: "Video stories collected for TheirWorld's 'Let Me Learn' campaign showcased at the UN Education Summit.";
-            
-            --video5-thumb: "https://images.unsplash.com/photo-1557804506-669a67965ba0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80";
-            --video5-url: "https://www.youtube.com/embed/dQw4w9WgXcQ";
-            --video5-title: "Sawa World: Grassroots Solutions";
-            --video5-desc: "Stories of local changemakers implementing innovative solutions to poverty in their communities.";
-            
-            --video6-thumb: "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80";
-            --video6-url: "https://www.youtube.com/embed/dQw4w9WgXcQ";
-            --video6-title: "Patriotism Corps Initiatives";
-            --video6-desc: "Multimedia stories highlighting patriotism, national values, and civic engagement across Uganda.";
-            
-            /* Photo Links - REPLACE WITH ACTUAL PHOTO LINKS */
-            --photo1: "https://example.com/photo1.jpg";
-            --photo2: "https://example.com/photo2.jpg";
-            --photo3: "https://example.com/photo3.jpg";
-            --photo4: "https://example.com/photo4.jpg";
-            --photo5: "https://example.com/photo5.jpg";
-            --photo6: "https://example.com/photo6.jpg";
-            --photo7: "https://example.com/photo7.jpg";
-            --photo8: "https://example.com/photo8.jpg";
         }
         
         /* Reset and Base Styles */
@@ -440,6 +384,19 @@
             color: #b3b3b3;
         }
         
+        .view-count {
+            display: flex;
+            align-items: center;
+            margin-top: 0.5rem;
+            font-size: 0.8rem;
+            color: #b3b3b3;
+        }
+        
+        .view-count::before {
+            content: '👁️';
+            margin-right: 5px;
+        }
+        
         /* Video Modal */
         .video-modal {
             display: none;
@@ -492,7 +449,7 @@
             border-radius: 4px;
         }
         
-        .video-container iframe {
+        .video-container video {
             position: absolute;
             top: 0;
             left: 0;
@@ -516,35 +473,334 @@
             font-size: 1rem;
         }
         
+        .modal-view-count {
+            display: flex;
+            align-items: center;
+            margin-top: 0.5rem;
+            font-size: 0.9rem;
+            color: #b3b3b3;
+        }
+        
+        .modal-view-count::before {
+            content: '👁️';
+            margin-right: 5px;
+        }
+        
         /* Photography Page Styles */
         #photography {
             padding: 2rem 4% 4rem;
         }
         
-        .photo-gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 1.5rem;
+        .page-content {
+            color: #b3b3b3;
+            margin-bottom: 2rem;
+            padding: 0 4%;
+            max-width: 800px;
         }
         
-        .photo-item {
-            border-radius: 4px;
+        /* Wedding Photo Books Section */
+        .wedding-section {
+            margin-top: 2rem;
+            padding: 0 4%;
+        }
+        
+        .section-title {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: white;
+            font-weight: 600;
+            text-align: center;
+            position: relative;
+        }
+        
+        .section-title:after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 3px;
+            background: var(--sunset-orange);
+            margin: 0.5rem auto 0;
+        }
+        
+        .section-subtitle {
+            text-align: center;
+            color: #b3b3b3;
+            margin-bottom: 3rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .wedding-books {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+        
+        .wedding-book {
+            background: var(--netflix-dark-gray);
+            border-radius: 8px;
             overflow: hidden;
-            transition: transform 0.3s ease;
-            height: 250px;
-            background-color: var(--netflix-dark-gray);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        }
+        
+        .wedding-book:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+        }
+        
+        .book-cover {
+            height: 220px;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .book-cover img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .wedding-book:hover .book-cover img {
+            transform: scale(1.05);
+        }
+        
+        .book-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
             display: flex;
             align-items: center;
             justify-content: center;
-            color: white;
-            font-size: 1.5rem;
-            cursor: pointer;
-            background-size: cover;
-            background-position: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
         }
         
-        .photo-item:hover {
-            transform: scale(1.03);
+        .wedding-book:hover .book-overlay {
+            opacity: 1;
+        }
+        
+        .view-book-btn {
+            background: var(--sunset-orange);
+            color: white;
+            border: none;
+            padding: 0.8rem 1.5rem;
+            border-radius: 4px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+        
+        .view-book-btn:hover {
+            background: var(--earth-brown);
+        }
+        
+        .book-details {
+            padding: 1.5rem;
+        }
+        
+        .book-title {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+            color: white;
+            font-weight: 600;
+        }
+        
+        .book-description {
+            color: #b3b3b3;
+            margin-bottom: 1rem;
+            font-size: 0.95rem;
+        }
+        
+        .book-features {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .feature-tag {
+            background: rgba(226, 88, 34, 0.2);
+            color: var(--sunset-orange);
+            padding: 0.3rem 0.7rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+        
+        .book-cta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .book-price {
+            font-weight: 600;
+            color: white;
+            font-size: 1.1rem;
+        }
+        
+        /* Call to Action Section */
+        .cta-section {
+            background: var(--netflix-dark-gray);
+            border-radius: 8px;
+            padding: 3rem 2rem;
+            text-align: center;
+            margin-top: 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .cta-section:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: var(--sunset-orange);
+        }
+        
+        .cta-title {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: white;
+            font-weight: 600;
+        }
+        
+        .cta-description {
+            color: #b3b3b3;
+            margin-bottom: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+        
+        /* WhatsApp Floating Button */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            width: 60px;
+            height: 60px;
+            background-color: #25D366;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+            z-index: 1000;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+        
+        .whatsapp-float:hover {
+            background-color: #128C7E;
+            transform: scale(1.1);
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+        }
+        
+        .whatsapp-tooltip {
+            position: absolute;
+            right: 70px;
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 8px 12px;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            white-space: nowrap;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            pointer-events: none;
+        }
+        
+        .whatsapp-float:hover .whatsapp-tooltip {
+            opacity: 1;
+        }
+        
+        /* Wedding Book Modal */
+        .book-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.95);
+            z-index: 2000;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem;
+        }
+        
+        .book-modal.active {
+            display: flex;
+        }
+        
+        .book-modal-content {
+            width: 95%;
+            max-width: 1200px;
+            height: 90vh;
+            background: var(--netflix-dark-gray);
+            border-radius: 8px;
+            overflow: hidden;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .book-modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .book-modal-title {
+            font-size: 1.5rem;
+            color: white;
+            font-weight: 600;
+        }
+        
+        .close-book-modal {
+            font-size: 1.8rem;
+            cursor: pointer;
+            color: white;
+            background: rgba(0,0,0,0.5);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .book-modal-body {
+            flex: 1;
+            display: flex;
+            overflow: hidden;
+        }
+        
+        .book-pdf-viewer {
+            flex: 1;
+            height: 100%;
+            border: none;
         }
         
         /* About Page Styles */
@@ -811,6 +1067,35 @@
             .video-item {
                 width: 250px;
             }
+            
+            .wedding-books {
+                grid-template-columns: 1fr;
+            }
+            
+            .book-modal-body {
+                flex-direction: column;
+            }
+            
+            .book-pdf-viewer {
+                height: 70vh;
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .whatsapp-float {
+                width: 50px;
+                height: 50px;
+                font-size: 1.5rem;
+                bottom: 20px;
+                right: 20px;
+            }
+            
+            .whatsapp-tooltip {
+                display: none;
+            }
         }
         
         @media (max-width: 480px) {
@@ -828,6 +1113,18 @@
             
             .page-title {
                 font-size: 1.5rem;
+            }
+            
+            .section-title {
+                font-size: 1.6rem;
+            }
+            
+            .book-modal-content {
+                height: 95vh;
+            }
+            
+            .cta-title {
+                font-size: 1.6rem;
             }
         }
     </style>
@@ -900,81 +1197,23 @@
             <div class="video-category">
                 <h3 class="category-title">Documentaries</h3>
                 <div class="video-row">
-                    <div class="video-item" data-video-url="var(--video1-url)" data-video-title="var(--video1-title)" data-video-desc="var(--video1-desc)">
-                        <img src="var(--video1-thumb)" alt="var(--video1-title)">
+                    <!-- Going Deeper for Gender Justice -->
+                    <div class="video-item" data-video-url="https://usc1.contabostorage.com/8593ef8d2b4a4502873a1044362667fb:videos/documentaries/Going Deeper For Gender Justice Documentary V4a-1.m4v" data-video-title="Going Deeper for Gender Justice" data-video-desc="A documentary exploring gender justice initiatives and their impact on communities in Uganda.">
+                        <img src="https://usc1.contabostorage.com/8593ef8d2b4a4502873a1044362667fb:videos/documentaries/thumbnail-gooing deeper for Gender Justice.jpg" alt="Going Deeper for Gender Justice">
                         <div class="video-info">
-                            <h3>var(--video1-title)</h3>
-                            <p>var(--video1-desc)</p>
+                            <h3>Going Deeper for Gender Justice</h3>
+                            <p>A documentary exploring gender justice initiatives and their impact on communities in Uganda.</p>
+                            <div class="view-count" id="viewCount1">0 views</div>
                         </div>
                     </div>
-                    <div class="video-item" data-video-url="var(--video2-url)" data-video-title="var(--video2-title)" data-video-desc="var(--video2-desc)">
-                        <img src="var(--video2-thumb)" alt="var(--video2-title)">
+                    
+                    <!-- 10 Years of Impact -->
+                    <div class="video-item" data-video-url="https://usc1.contabostorage.com/8593ef8d2b4a4502873a1044362667fb:videos/documentaries/10 Years of Self-Help Group Impact in Uganda's Nebbi & Teso Regions.mp4" data-video-title="10 Years of Impact" data-video-desc="Documenting the transformative impact of self-help groups in Uganda's Nebbi and Teso regions over a decade.">
+                        <img src="https://usc1.contabostorage.com/8593ef8d2b4a4502873a1044362667fb:videos/documentaries/thumbnail-10-years-of-world-renew.jpg" alt="10 Years of Impact">
                         <div class="video-info">
-                            <h3>var(--video2-title)</h3>
-                            <p>var(--video2-desc)</p>
-                        </div>
-                    </div>
-                    <div class="video-item" data-video-url="var(--video3-url)" data-video-title="var(--video3-title)" data-video-desc="var(--video3-desc)">
-                        <img src="var(--video3-thumb)" alt="var(--video3-title)">
-                        <div class="video-info">
-                            <h3>var(--video3-title)</h3>
-                            <p>var(--video3-desc)</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Campaign Videos Row -->
-            <div class="video-category">
-                <h3 class="category-title">Campaign Videos</h3>
-                <div class="video-row">
-                    <div class="video-item" data-video-url="var(--video4-url)" data-video-title="var(--video4-title)" data-video-desc="var(--video4-desc)">
-                        <img src="var(--video4-thumb)" alt="var(--video4-title)">
-                        <div class="video-info">
-                            <h3>var(--video4-title)</h3>
-                            <p>var(--video4-desc)</p>
-                        </div>
-                    </div>
-                    <div class="video-item" data-video-url="var(--video5-url)" data-video-title="var(--video5-title)" data-video-desc="var(--video5-desc)">
-                        <img src="var(--video5-thumb)" alt="var(--video5-title)">
-                        <div class="video-info">
-                            <h3>var(--video5-title)</h3>
-                            <p>var(--video5-desc)</p>
-                        </div>
-                    </div>
-                    <div class="video-item" data-video-url="var(--video6-url)" data-video-title="var(--video6-title)" data-video-desc="var(--video6-desc)">
-                        <img src="var(--video6-thumb)" alt="var(--video6-title)">
-                        <div class="video-info">
-                            <h3>var(--video6-title)</h3>
-                            <p>var(--video6-desc)</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Community Stories Row -->
-            <div class="video-category">
-                <h3 class="category-title">Community Stories</h3>
-                <div class="video-row">
-                    <div class="video-item" data-video-url="var(--video1-url)" data-video-title="var(--video1-title)" data-video-desc="var(--video1-desc)">
-                        <img src="var(--video1-thumb)" alt="var(--video1-title)">
-                        <div class="video-info">
-                            <h3>var(--video1-title)</h3>
-                            <p>var(--video1-desc)</p>
-                        </div>
-                    </div>
-                    <div class="video-item" data-video-url="var(--video5-url)" data-video-title="var(--video5-title)" data-video-desc="var(--video5-desc)">
-                        <img src="var(--video5-thumb)" alt="var(--video5-title)">
-                        <div class="video-info">
-                            <h3>var(--video5-title)</h3>
-                            <p>var(--video5-desc)</p>
-                        </div>
-                    </div>
-                    <div class="video-item" data-video-url="var(--video3-url)" data-video-title="var(--video3-title)" data-video-desc="var(--video3-desc)">
-                        <img src="var(--video3-thumb)" alt="var(--video3-title)">
-                        <div class="video-info">
-                            <h3>var(--video3-title)</h3>
-                            <p>var(--video3-desc)</p>
+                            <h3>10 Years of Impact</h3>
+                            <p>Documenting the transformative impact of self-help groups in Uganda's Nebbi and Teso regions over a decade.</p>
+                            <div class="view-count" id="viewCount2">0 views</div>
                         </div>
                     </div>
                 </div>
@@ -986,11 +1225,14 @@
             <div class="modal-content">
                 <span class="close-modal" id="closeModal">&times;</span>
                 <div class="video-container">
-                    <iframe id="videoFrame" src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <video id="videoPlayer" controls>
+                        Your browser does not support the video tag.
+                    </video>
                 </div>
                 <div class="modal-video-info">
                     <h3 id="modalVideoTitle"></h3>
                     <p id="modalVideoDesc"></p>
+                    <div class="modal-view-count" id="modalViewCount">0 views</div>
                 </div>
             </div>
         </div>
@@ -998,19 +1240,109 @@
         <!-- Photography Page -->
         <section id="photography" class="page">
             <h2 class="page-title">Photography Portfolio</h2>
-            <p class="page-content">A visual journey through my photography work, capturing moments, people, and places across Africa.</p>
+            <p class="page-content">Specializing in wedding photography that captures the unique beauty, emotion, and cultural richness of celebrations across Uganda. Each photo book tells a complete story of love, tradition, and joy.</p>
             
-            <div class="photo-gallery">
-                <div class="photo-item" style="background-image: url('var(--photo1)')"></div>
-                <div class="photo-item" style="background-image: url('var(--photo2)')"></div>
-                <div class="photo-item" style="background-image: url('var(--photo3)')"></div>
-                <div class="photo-item" style="background-image: url('var(--photo4)')"></div>
-                <div class="photo-item" style="background-image: url('var(--photo5)')"></div>
-                <div class="photo-item" style="background-image: url('var(--photo6)')"></div>
-                <div class="photo-item" style="background-image: url('var(--photo7)')"></div>
-                <div class="photo-item" style="background-image: url('var(--photo8)')"></div>
+            <!-- Wedding Photo Books Section -->
+            <div class="wedding-section">
+                <h2 class="section-title">Wedding Photo Books</h2>
+                <p class="section-subtitle">Experience the magic of love stories through these beautifully crafted wedding photo books. Each book tells a unique story of celebration, tradition, and romance captured across Uganda.</p>
+                
+                <div class="wedding-books">
+                    <!-- Emma Weds Jacinta -->
+                    <div class="wedding-book">
+                        <div class="book-cover">
+                            <img src="https://usc1.contabostorage.com/8593ef8d2b4a4502873a1044362667fb:photo.books/emmanuel-weds-acinta-thumbnail.pdf.jpg" alt="Emma Weds Jacinta Wedding Photo Book">
+                            <div class="book-overlay">
+                                <button class="view-book-btn" data-book-url="https://usc1.contabostorage.com/8593ef8d2b4a4502873a1044362667fb:photo.books/Emmanuel-Weds-Jacinta-Photo-Book.pdf.pdf" data-book-title="Emma Weds Jacinta">View Book</button>
+                            </div>
+                        </div>
+                        <div class="book-details">
+                            <h3 class="book-title">Emma Weds Jacinta</h3>
+                            <p class="book-description">A beautiful celebration of love and tradition, capturing the vibrant colors and heartfelt moments of this Ugandan wedding ceremony.</p>
+                            <div class="book-features">
+                                <span class="feature-tag">Traditional Ceremony</span>
+                                <span class="feature-tag">Cultural Details</span>
+                                <span class="feature-tag">Family Portraits</span>
+                            </div>
+                            <div class="book-cta">
+                                <span class="book-price">Premium Album</span>
+                                <button class="view-book-btn" data-book-url="https://usc1.contabostorage.com/8593ef8d2b4a4502873a1044362667fb:photo.books/Emmanuel-Weds-Jacinta-Photo-Book.pdf.pdf" data-book-title="Emma Weds Jacinta">Preview</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Simon Weds Hafie -->
+                    <div class="wedding-book">
+                        <div class="book-cover">
+                            <img src="https://usc1.contabostorage.com/8593ef8d2b4a4502873a1044362667fb:photo.books/simon-weds-hafie-thumbnail.jpg" alt="Simon Weds Hafie Wedding Photo Book">
+                            <div class="book-overlay">
+                                <button class="view-book-btn" data-book-url="https://usc1.contabostorage.com/8593ef8d2b4a4502873a1044362667fb:photo.books/Simon-Weds-Hafie-Photo-book.pdf" data-book-title="Simon Weds Hafie">View Book</button>
+                            </div>
+                        </div>
+                        <div class="book-details">
+                            <h3 class="book-title">Simon Weds Hafie</h3>
+                            <p class="book-description">An elegant fusion of modern and traditional elements, this wedding album showcases the couple's unique style and joyful celebration.</p>
+                            <div class="book-features">
+                                <span class="feature-tag">Modern Elegance</span>
+                                <span class="feature-tag">Emotional Moments</span>
+                                <span class="feature-tag">Reception Highlights</span>
+                            </div>
+                            <div class="book-cta">
+                                <span class="book-price">Luxury Edition</span>
+                                <button class="view-book-btn" data-book-url="https://usc1.contabostorage.com/8593ef8d2b4a4502873a1044362667fb:photo.books/Simon-Weds-Hafie-Photo-book.pdf" data-book-title="Simon Weds Hafie">Preview</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Paul Weds Aine -->
+                    <div class="wedding-book">
+                        <div class="book-cover">
+                            <img src="https://usc1.contabostorage.com/8593ef8d2b4a4502873a1044362667fb:photo.books/Paul-&-Aine-wedding-photobook-jan-2025-thumbnail.pdf.jpg" alt="Paul Weds Aine Wedding Photo Book">
+                            <div class="book-overlay">
+                                <button class="view-book-btn" data-book-url="https://usc1.contabostorage.com/8593ef8d2b4a4502873a1044362667fb:photo.books/Paul-&-Aine-Photobook-Jan-2025.pdf.pdf" data-book-title="Paul Weds Aine">View Book</button>
+                            </div>
+                        </div>
+                        <div class="book-details">
+                            <h3 class="book-title">Paul Weds Aine</h3>
+                            <p class="book-description">Capturing the intimate moments and grand celebrations of this beautiful January wedding, showcasing the couple's journey to forever.</p>
+                            <div class="book-features">
+                                <span class="feature-tag">Intimate Moments</span>
+                                <span class="feature-tag">January Wedding</span>
+                                <span class="feature-tag">Storytelling</span>
+                            </div>
+                            <div class="book-cta">
+                                <span class="book-price">Deluxe Collection</span>
+                                <button class="view-book-btn" data-book-url="https://usc1.contabostorage.com/8593ef8d2b4a4502873a1044362667fb:photo.books/Paul-&-Aine-Photobook-Jan-2025.pdf.pdf" data-book-title="Paul Weds Aine">Preview</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Call to Action Section -->
+                <div class="cta-section">
+                    <h3 class="cta-title">Ready to Capture Your Special Day or Projects?</h3>
+                    <p class="cta-description">Let's create beautiful memories together. Contact me to discuss your projects, wedding and product photography needs and how we can tell your unique love story through stunning imagery.</p>
+                    <div class="cta-buttons">
+                        <a href="https://wa.me/256756180429" class="btn btn-whatsapp" target="_blank">Chat on WhatsApp</a>
+                        <a href="mailto:binomugishacom@gmail.com" class="btn">Send an Email</a>
+                        <button class="btn btn-outline" id="viewPortfolioBtn">View More Work</button>
+                    </div>
+                </div>
             </div>
         </section>
+        
+        <!-- Wedding Book Modal -->
+        <div class="book-modal" id="bookModal">
+            <div class="book-modal-content">
+                <div class="book-modal-header">
+                    <h3 class="book-modal-title" id="bookModalTitle">Wedding Photo Book</h3>
+                    <span class="close-book-modal" id="closeBookModal">&times;</span>
+                </div>
+                <div class="book-modal-body">
+                    <iframe class="book-pdf-viewer" id="bookPdfViewer" frameborder="0"></iframe>
+                </div>
+            </div>
+        </div>
         
         <!-- About Page -->
         <section id="about" class="page">
@@ -1127,6 +1459,12 @@
         </section>
     </div>
     
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/256756180429" class="whatsapp-float" target="_blank">
+        💬
+        <span class="whatsapp-tooltip">Chat with us on WhatsApp!</span>
+    </a>
+    
     <!-- Footer -->
     <footer>
         <div class="footer-content">
@@ -1157,8 +1495,46 @@
             }
         });
         
+        // View tracking system
+        const viewCounts = {
+            'Going Deeper for Gender Justice': 0,
+            '10 Years of Impact': 0
+        };
+        
+        // Load view counts from localStorage
+        function loadViewCounts() {
+            const savedCounts = localStorage.getItem('videoViewCounts');
+            if (savedCounts) {
+                Object.assign(viewCounts, JSON.parse(savedCounts));
+            }
+            updateViewCounts();
+        }
+        
+        // Save view counts to localStorage
+        function saveViewCounts() {
+            localStorage.setItem('videoViewCounts', JSON.stringify(viewCounts));
+        }
+        
+        // Update view count displays
+        function updateViewCounts() {
+            document.getElementById('viewCount1').textContent = `${viewCounts['Going Deeper for Gender Justice']} views`;
+            document.getElementById('viewCount2').textContent = `${viewCounts['10 Years of Impact']} views`;
+        }
+        
+        // Increment view count for a video
+        function incrementViewCount(videoTitle) {
+            if (viewCounts.hasOwnProperty(videoTitle)) {
+                viewCounts[videoTitle]++;
+                saveViewCounts();
+                updateViewCounts();
+            }
+        }
+        
         // Page navigation functionality
         document.addEventListener('DOMContentLoaded', function() {
+            // Load view counts when page loads
+            loadViewCounts();
+            
             const navButtons = document.querySelectorAll('.nav-btn');
             const pages = document.querySelectorAll('.page');
             
@@ -1208,29 +1584,49 @@
                 });
             }
             
+            // "View Portfolio" button on photography page
+            const viewPortfolioBtn = document.getElementById('viewPortfolioBtn');
+            if (viewPortfolioBtn) {
+                viewPortfolioBtn.addEventListener('click', function() {
+                    switchPage('videos');
+                });
+            }
+            
             // "Play Featured" button on video page
             const playFeaturedBtn = document.getElementById('playFeatured');
             if (playFeaturedBtn) {
                 playFeaturedBtn.addEventListener('click', function() {
-                    openVideoModal('var(--video1-url)', 'var(--video1-title)', 'var(--video1-desc)');
+                    openVideoModal(
+                        'https://usc1.contabostorage.com/8593ef8d2b4a4502873a1044362667fb:videos/documentaries/Going Deeper For Gender Justice Documentary V4a-1.m4v', 
+                        'Going Deeper for Gender Justice', 
+                        'A documentary exploring gender justice initiatives and their impact on communities in Uganda.'
+                    );
                 });
             }
             
             // Video modal functionality
             const videoModal = document.getElementById('videoModal');
             const closeModal = document.getElementById('closeModal');
-            const videoFrame = document.getElementById('videoFrame');
+            const videoPlayer = document.getElementById('videoPlayer');
             const modalVideoTitle = document.getElementById('modalVideoTitle');
             const modalVideoDesc = document.getElementById('modalVideoDesc');
+            const modalViewCount = document.getElementById('modalViewCount');
             const videoItems = document.querySelectorAll('.video-item');
             
             // Function to open video modal
             function openVideoModal(videoUrl, title, description) {
-                videoFrame.src = videoUrl;
+                videoPlayer.src = videoUrl;
                 modalVideoTitle.textContent = title;
                 modalVideoDesc.textContent = description;
+                modalViewCount.textContent = `${viewCounts[title]} views`;
                 videoModal.classList.add('active');
                 document.body.style.overflow = 'hidden'; // Prevent scrolling
+                
+                // Increment view count when video starts playing
+                videoPlayer.onplay = function() {
+                    incrementViewCount(title);
+                    modalViewCount.textContent = `${viewCounts[title]} views`;
+                };
             }
             
             // Open video modal when clicking on video items
@@ -1246,7 +1642,8 @@
             // Close video modal
             closeModal.addEventListener('click', function() {
                 videoModal.classList.remove('active');
-                videoFrame.src = '';
+                videoPlayer.pause();
+                videoPlayer.src = '';
                 document.body.style.overflow = 'auto'; // Re-enable scrolling
             });
             
@@ -1254,7 +1651,8 @@
             videoModal.addEventListener('click', function(e) {
                 if (e.target === videoModal) {
                     videoModal.classList.remove('active');
-                    videoFrame.src = '';
+                    videoPlayer.pause();
+                    videoPlayer.src = '';
                     document.body.style.overflow = 'auto'; // Re-enable scrolling
                 }
             });
@@ -1263,7 +1661,57 @@
             document.addEventListener('keydown', function(e) {
                 if (e.key === 'Escape' && videoModal.classList.contains('active')) {
                     videoModal.classList.remove('active');
-                    videoFrame.src = '';
+                    videoPlayer.pause();
+                    videoPlayer.src = '';
+                    document.body.style.overflow = 'auto'; // Re-enable scrolling
+                }
+            });
+            
+            // Wedding Book Modal Functionality
+            const bookModal = document.getElementById('bookModal');
+            const closeBookModal = document.getElementById('closeBookModal');
+            const bookPdfViewer = document.getElementById('bookPdfViewer');
+            const bookModalTitle = document.getElementById('bookModalTitle');
+            const viewBookButtons = document.querySelectorAll('.view-book-btn');
+            
+            // Function to open wedding book modal
+            function openBookModal(bookUrl, bookTitle) {
+                bookPdfViewer.src = bookUrl;
+                bookModalTitle.textContent = bookTitle;
+                bookModal.classList.add('active');
+                document.body.style.overflow = 'hidden'; // Prevent scrolling
+            }
+            
+            // Open wedding book modal when clicking on view buttons
+            viewBookButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const bookUrl = this.getAttribute('data-book-url');
+                    const bookTitle = this.getAttribute('data-book-title');
+                    openBookModal(bookUrl, bookTitle);
+                });
+            });
+            
+            // Close wedding book modal
+            closeBookModal.addEventListener('click', function() {
+                bookModal.classList.remove('active');
+                bookPdfViewer.src = '';
+                document.body.style.overflow = 'auto'; // Re-enable scrolling
+            });
+            
+            // Close wedding book modal when clicking outside
+            bookModal.addEventListener('click', function(e) {
+                if (e.target === bookModal) {
+                    bookModal.classList.remove('active');
+                    bookPdfViewer.src = '';
+                    document.body.style.overflow = 'auto'; // Re-enable scrolling
+                }
+            });
+            
+            // Close wedding book modal with Escape key
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape' && bookModal.classList.contains('active')) {
+                    bookModal.classList.remove('active');
+                    bookPdfViewer.src = '';
                     document.body.style.overflow = 'auto'; // Re-enable scrolling
                 }
             });
