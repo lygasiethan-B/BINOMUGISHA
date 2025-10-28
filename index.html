@@ -1098,11 +1098,11 @@
             to { opacity: 1; transform: translateY(0); }
         }
         
-        /* Responsive Styles */
+        /* Responsive Styles - FIXED MOBILE NAVIGATION */
         @media (max-width: 768px) {
             header {
-                padding: 1rem 0;
                 position: relative;
+                padding: 1rem 0;
             }
             
             .logo {
@@ -1133,13 +1133,14 @@
                 margin-top: 0;
             }
             
-            /* Adjust header spacing when scrolled on mobile */
+            /* Only make header fixed when scrolled on mobile */
             header.scrolled {
                 position: fixed;
                 width: 100%;
                 top: 0;
                 background-color: var(--netflix-black);
                 padding: 0.8rem 0;
+                z-index: 1000;
             }
             
             header.scrolled .logo {
@@ -1537,65 +1538,20 @@
         <!-- Contact Page -->
         <section id="contact" class="page">
             <h2 class="page-title">Get In Touch</h2>
+            
             <div class="contact-container">
                 <div class="contact-info">
                     <h3>Let's Create Something Powerful Together</h3>
-                    <p>Whether you need video production, photography services, or training for your team, I'd love to discuss how we can work together to tell impactful African stories.</p>
-                    
-                    <div class="contact-details">
-                        <div class="contact-item">
-                            <div class="contact-icon">📧</div>
-                            <div>
-                                <strong>Email</strong><br>
-                                binomugishacom@gmail.com
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <div class="contact-icon">📞</div>
-                            <div>
-                                <strong>Phone/WhatsApp</strong><br>
-                                +256756180429
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <div class="contact-icon">📍</div>
-                            <div>
-                                <strong>Location</strong><br>
-                                Bukoto - Kisasai Road, Kampala, Uganda
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <a href="https://wa.me/256756180429" class="btn btn-whatsapp" target="_blank">Message on WhatsApp</a>
-                </div>
-                
-                <div class="contact-form">
-                    <form id="contactForm" action="https://formsubmit.co/binomugishacom@gmail.com" method="POST">
-                        <!-- FormSubmit.co Configuration -->
-                        <input type="hidden" name="_subject" value="New contact from BINOMUGISHA website">
-                        <input type="hidden" name="_template" value="table">
-                        <input type="hidden" name="_next" value="https://lygasiethan-b.github.io/BINOMUGISHA/thank-you.html">
-                        <input type="hidden" name="_captcha" value="false">
-                        <input type="text" name="_honey" style="display:none">
-                        
-                        <div class="form-group">
-                            <label for="name">Your Name</label>
-                            <input type="text" id="name" name="name" class="form-control" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email Address</label>
-                            <input type="email" id="email" name="email" class="form-control" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="subject">Subject</label>
-                            <input type="text" id="subject" name="_subject" class="form-control" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Message</label>
-                            <textarea id="message" name="message" class="form-control" required></textarea>
-                        </div>
-                        <button type="submit" class="btn">Send Message</button>
-                    </form>
+                    <p>Whether you need short or long form documentary and film production, photography services, livestream, media strategic planning, communications or mentorship for your team, I'd love to discuss how we can work together to tell impactful African stories.</p>
+
+            <!-- Call to Action Section - Matching Photography Page -->
+            <div class="cta-section">
+                <h3 class="cta-title">Ready to Start Your Next Project?</h3>
+                <p class="cta-description">Let's create impactful stories together. Contact me to discuss your documentary, photography, livestream, or media strategy needs and how we can bring your vision to life.</p>
+                <div class="cta-buttons">
+                    <a href="https://wa.me/256756180429" class="btn btn-whatsapp" target="_blank">Chat on WhatsApp</a>
+                    <a href="mailto:binomugishacom@gmail.com" class="btn">Send an Email</a>
+                    <button class="btn btn-outline" id="viewWorkContactBtn">View My Work</button>
                 </div>
             </div>
         </section>
@@ -1679,6 +1635,7 @@
             
             const navButtons = document.querySelectorAll('.nav-btn');
             const pages = document.querySelectorAll('.page');
+            const mobileNavBtns = document.querySelectorAll('.mobile-nav-btn');
             
             // Function to switch pages
             function switchPage(pageId) {
@@ -1699,21 +1656,15 @@
                 });
                 
                 // Update mobile nav buttons
-                updateMobileNav(pageId);
-                
-                // Scroll to top when switching pages
-                window.scrollTo(0, 0);
-            }
-            
-            // Update mobile nav buttons
-            function updateMobileNav(pageId) {
-                const mobileNavBtns = document.querySelectorAll('.mobile-nav-btn');
                 mobileNavBtns.forEach(button => {
                     button.classList.remove('active');
                     if (button.getAttribute('data-page') === pageId) {
                         button.classList.add('active');
                     }
                 });
+                
+                // Scroll to top when switching pages
+                window.scrollTo(0, 0);
             }
             
             // Add click event to nav buttons
@@ -1744,6 +1695,14 @@
             const viewPortfolioBtn = document.getElementById('viewPortfolioBtn');
             if (viewPortfolioBtn) {
                 viewPortfolioBtn.addEventListener('click', function() {
+                    switchPage('videos');
+                });
+            }
+            
+            // "View My Work" button on contact page
+            const viewWorkContactBtn = document.getElementById('viewWorkContactBtn');
+            if (viewWorkContactBtn) {
+                viewWorkContactBtn.addEventListener('click', function() {
                     switchPage('videos');
                 });
             }
@@ -1875,10 +1834,10 @@
             // Mobile Navigation Functionality
             const mobileMenuBtn = document.getElementById('mobileMenuBtn');
             const mobileNavDropdown = document.getElementById('mobileNavDropdown');
-            const mobileNavBtns = document.querySelectorAll('.mobile-nav-btn');
             
             // Toggle mobile menu
-            mobileMenuBtn.addEventListener('click', function() {
+            mobileMenuBtn.addEventListener('click', function(e) {
+                e.stopPropagation();
                 this.classList.toggle('active');
                 mobileNavDropdown.classList.toggle('active');
             });
@@ -1894,11 +1853,14 @@
             });
             
             // Close mobile menu when clicking outside
-            document.addEventListener('click', function(e) {
-                if (!e.target.closest('nav') && mobileNavDropdown.classList.contains('active')) {
-                    mobileMenuBtn.classList.remove('active');
-                    mobileNavDropdown.classList.remove('active');
-                }
+            document.addEventListener('click', function() {
+                mobileMenuBtn.classList.remove('active');
+                mobileNavDropdown.classList.remove('active');
+            });
+            
+            // Prevent mobile menu from closing when clicking inside it
+            mobileNavDropdown.addEventListener('click', function(e) {
+                e.stopPropagation();
             });
             
             // Form submission handling
