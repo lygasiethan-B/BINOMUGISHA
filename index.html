@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BINOMUGISHA | Video Production & Photography | African Storytelling</title>
-    <meta name="description" content="Nathan Binomugisha - African visual storyteller, video producer & photographer. Creating impactful documentaries and visual content across Uganda and beyond.">
-    <meta name="keywords" content="African storytelling, video production Uganda, photography Kampala, documentary filmmaker, visual storytelling, communications consultant, wedding photography Uganda">
+    <meta name="description" content="Nathan Binomugisha - Award-winning African visual storyteller & documentary filmmaker. Professional video production, photography, and media strategy services in Uganda. Creating impactful stories that drive change.">
+    <meta name="keywords" content="African storytelling, video production Uganda, photography Kampala, documentary filmmaker, visual storytelling, communications consultant, wedding photography Uganda, Nathan Binomugisha">
     <meta name="author" content="Nathan Binomugisha">    
     
-    <!-- For Google Search Console (get code from https://search.google.com/search-console/) -->
+    <!-- For Google Search Console -->
     <meta name="google-site-verification" content="8cLtxhZyr4NnoQAwbD6L-8D8jChDtxD1yZjuvoOlXw4" />
 
     <!-- Robots instructions -->
@@ -17,18 +17,52 @@
     <!-- Canonical URL -->
     <link rel="canonical" href="https://lygasiethan-b.github.io/BINOMUGISHA/">
 
+    <!-- Sitemap -->
+    <link rel="sitemap" type="application/xml" href="/sitemap.xml">
+
+    <!-- Preload critical resources -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+
     <!-- Open Graph for Social Media -->
-    <meta property="og:title" content="BINOMUGISHA | Video Production & Photography">
-    <meta property="og:description" content="African visual storyteller creating impactful documentaries and visual content across Uganda">
+    <meta property="og:title" content="BINOMUGISHA | Video Production & Photography | African Storytelling">
+    <meta property="og:description" content="Award-winning African visual storyteller creating impactful documentaries and visual content across Uganda">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://lygasiethan-b.github.io/BINOMUGISHA/">
     <meta property="og:image" content="https://via.placeholder.com/1200x630/E25822/FFFFFF?text=BINOMUGISHA">
+    <meta property="og:site_name" content="BINOMUGISHA">
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="BINOMUGISHA | Video Production & Photography">
     <meta name="twitter:description" content="African visual storyteller creating impactful documentaries">
     <meta name="twitter:image" content="https://via.placeholder.com/1200x630/E25822/FFFFFF?text=BINOMUGISHA">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Nathan Binomugisha",
+      "jobTitle": "Video Producer & Photographer",
+      "description": "African visual storyteller creating impactful documentaries and visual content across Uganda",
+      "url": "https://lygasiethan-b.github.io/BINOMUGISHA/",
+      "sameAs": [
+        "https://www.linkedin.com/in/binomugisha/"
+      ],
+      "knowsAbout": [
+        "Video Production",
+        "Photography",
+        "African Storytelling",
+        "Documentary Filmmaking",
+        "Media Strategy",
+        "Communications"
+      ],
+      "worksFor": {
+        "@type": "Organization",
+        "name": "BINOMUGISHA Media"
+      }
+    }
+    </script>
     
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -61,6 +95,29 @@
             color: white;
             line-height: 1.6;
             overflow-x: hidden;
+        }
+        
+        /* Improve Core Web Vitals */
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        
+        /* Add focus styles for accessibility */
+        button:focus, 
+        .btn:focus, 
+        .nav-btn:focus {
+            outline: 2px solid var(--sunset-orange);
+            outline-offset: 2px;
+        }
+        
+        /* Add reduced motion for accessibility */
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
         }
         
         /* Header Styles */
@@ -263,7 +320,7 @@
             max-width: 600px;
         }
         
-        .hero h2 {
+        .hero h1 {
             font-size: 3.5rem;
             margin-bottom: 1rem;
             color: white;
@@ -1081,6 +1138,7 @@
             color: #b3b3b3;
             font-size: 1.5rem;
             transition: color 0.3s ease;
+            text-decoration: none;
         }
         
         .social-link:hover {
@@ -1156,7 +1214,7 @@
                 grid-template-columns: 1fr;
             }
             
-            .hero h2 {
+            .hero h1 {
                 font-size: 2.5rem;
             }
             
@@ -1224,7 +1282,7 @@
         }
         
         @media (max-width: 480px) {
-            .hero h2 {
+            .hero h1 {
                 font-size: 2rem;
             }
             
@@ -1262,9 +1320,9 @@
     </header>
     
     <!-- Navigation -->
-    <nav>
+    <nav aria-label="Main navigation">
         <div class="nav-container">
-            <button class="nav-btn active" data-page="home">Home</button>
+            <button class="nav-btn active" data-page="home" aria-current="page">Home</button>
             <button class="nav-btn" data-page="videos">Videos</button>
             <button class="nav-btn" data-page="photography">Photography</button>
             <button class="nav-btn" data-page="about">About</button>
@@ -1272,7 +1330,7 @@
         </div>
         
         <!-- Mobile Menu Button -->
-        <div class="mobile-menu-btn" id="mobileMenuBtn">
+        <div class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle mobile menu">
             <span></span>
             <span></span>
             <span></span>
@@ -1280,7 +1338,7 @@
         
         <!-- Mobile Dropdown Menu -->
         <div class="mobile-nav-dropdown" id="mobileNavDropdown">
-            <button class="mobile-nav-btn active" data-page="home">Home</button>
+            <button class="mobile-nav-btn active" data-page="home" aria-current="page">Home</button>
             <button class="mobile-nav-btn" data-page="videos">Videos</button>
             <button class="mobile-nav-btn" data-page="photography">Photography</button>
             <button class="mobile-nav-btn" data-page="about">About</button>
@@ -1294,11 +1352,11 @@
         <section id="home" class="page active">
             <div class="hero">
                 <div class="hero-content">
-                    <h2>African Stories, Told with Impact</h2>
+                    <h1>African Stories, Told with Impact</h1>
                     <p>We guide the next generation of African digital storytellers, leveraging robust Media Strategy, compelling Communications, and hands-on Mentorship, to produce powerful content that transforms communities and drives change.</p>
                     <div class="btn-container">
                         <button class="btn" id="viewWorkBtn">View My Work</button>
-                        <a href="https://wa.me/256756180429" class="btn btn-whatsapp" target="_blank">Chat on WhatsApp</a>
+                        <a href="https://wa.me/256756180429" class="btn btn-whatsapp" target="_blank" rel="noopener noreferrer">Chat on WhatsApp</a>
                         <button class="btn btn-outline" id="learnMoreBtn">Learn More</button>
                     </div>
                 </div>
@@ -1340,7 +1398,7 @@
                 <div class="video-row">
                     <!-- Going Deeper for Gender Justice -->
                     <div class="video-item" data-video-url="https://usc1.contabostorage.com/8593ef8d2b4a4502873a1044362667fb:videos/documentaries/Going Deeper For Gender Justice Documentary V4a-1.m4v" data-video-title="Going Deeper for Gender Justice" data-video-desc="A documentary exploring gender justice initiatives and their impact on communities in Uganda.">
-                        <img src="https://usc1.contabostorage.com/8593ef8d2b4a4502873a1044362667fb:videos/documentaries/thumbnail-gooing deeper for Gender Justice.jpg" alt="Going Deeper for Gender Justice">
+                        <img src="https://usc1.contabostorage.com/8593ef8d2b4a4502873a1044362667fb:videos/documentaries/thumbnail-gooing deeper for Gender Justice.jpg" alt="Going Deeper for Gender Justice Documentary - African storytelling Uganda" loading="lazy">
                         <div class="video-info">
                             <h3>Going Deeper for Gender Justice</h3>
                             <p>A documentary exploring gender justice initiatives and their impact on communities in Uganda.</p>
@@ -1350,7 +1408,7 @@
                     
                     <!-- 10 Years of Impact -->
                     <div class="video-item" data-video-url="https://usc1.contabostorage.com/8593ef8d2b4a4502873a1044362667fb:videos/documentaries/10 Years of Self-Help Group Impact in Uganda's Nebbi & Teso Regions.mp4" data-video-title="10 Years of Impact" data-video-desc="Documenting the transformative impact of self-help groups in Uganda's Nebbi and Teso regions over a decade.">
-                        <img src="https://usc1.contabostorage.com/8593ef8d2b4a4502873a1044362667fb:videos/documentaries/thumbnail-10-years-of-world-renew.jpg" alt="10 Years of Impact">
+                        <img src="https://usc1.contabostorage.com/8593ef8d2b4a4502873a1044362667fb:videos/documentaries/thumbnail-10-years-of-world-renew.jpg" alt="10 Years of Impact Documentary - Uganda development stories" loading="lazy">
                         <div class="video-info">
                             <h3>10 Years of Impact</h3>
                             <p>Documenting the transformative impact of self-help groups in Uganda's Nebbi and Teso regions over a decade.</p>
@@ -1392,7 +1450,7 @@
                     <!-- Emma Weds Jacinta -->
                     <div class="wedding-book">
                         <div class="book-cover">
-                            <img src="https://usc1.contabostorage.com/8593ef8d2b4a4502873a1044362667fb:photo.books/emmanuel-weds-acinta-thumbnail.pdf.jpg" alt="Emma Weds Jacinta Wedding Photo Book">
+                            <img src="https://usc1.contabostorage.com/8593ef8d2b4a4502873a1044362667fb:photo.books/emmanuel-weds-acinta-thumbnail.pdf.jpg" alt="Emma Weds Jacinta Wedding Photo Book - Ugandan wedding photography" loading="lazy">
                             <div class="book-overlay">
                                 <button class="view-book-btn" data-book-url="https://usc1.contabostorage.com/8593ef8d2b4a4502873a1044362667fb:photo.books/Emmanuel-Weds-Jacinta-Photo-Book.pdf.pdf" data-book-title="Emma Weds Jacinta">View Book</button>
                             </div>
@@ -1415,7 +1473,7 @@
                     <!-- Simon Weds Hafie -->
                     <div class="wedding-book">
                         <div class="book-cover">
-                            <img src="https://usc1.contabostorage.com/8593ef8d2b4a4502873a1044362667fb:photo.books/simon-weds-hafie-thumbnail.jpg" alt="Simon Weds Hafie Wedding Photo Book">
+                            <img src="https://usc1.contabostorage.com/8593ef8d2b4a4502873a1044362667fb:photo.books/simon-weds-hafie-thumbnail.jpg" alt="Simon Weds Hafie Wedding Photo Book - Kampala wedding photography" loading="lazy">
                             <div class="book-overlay">
                                 <button class="view-book-btn" data-book-url="https://usc1.contabostorage.com/8593ef8d2b4a4502873a1044362667fb:photo.books/Simon-Weds-Hafie-Photo-book.pdf" data-book-title="Simon Weds Hafie">View Book</button>
                             </div>
@@ -1438,7 +1496,7 @@
                     <!-- Paul Weds Aine -->
                     <div class="wedding-book">
                         <div class="book-cover">
-                            <img src="https://usc1.contabostorage.com/8593ef8d2b4a4502873a1044362667fb:photo.books/Paul-&-Aine-wedding-photobook-jan-2025-thumbnail.pdf.jpg" alt="Paul Weds Aine Wedding Photo Book">
+                            <img src="https://usc1.contabostorage.com/8593ef8d2b4a4502873a1044362667fb:photo.books/Paul-&-Aine-wedding-photobook-jan-2025-thumbnail.pdf.jpg" alt="Paul Weds Aine Wedding Photo Book - African wedding stories" loading="lazy">
                             <div class="book-overlay">
                                 <button class="view-book-btn" data-book-url="https://usc1.contabostorage.com/8593ef8d2b4a4502873a1044362667fb:photo.books/Paul-&-Aine-Photobook-Jan-2025.pdf.pdf" data-book-title="Paul Weds Aine">View Book</button>
                             </div>
@@ -1464,7 +1522,7 @@
                     <h3 class="cta-title">Ready to Capture Your Special Day or Projects?</h3>
                     <p class="cta-description">Let's create beautiful memories together. Contact me to discuss your projects, wedding and product photography needs and how we can tell your unique love story through stunning imagery.</p>
                     <div class="cta-buttons">
-                        <a href="https://wa.me/256756180429" class="btn btn-whatsapp" target="_blank">Chat on WhatsApp</a>
+                        <a href="https://wa.me/256756180429" class="btn btn-whatsapp" target="_blank" rel="noopener noreferrer">Chat on WhatsApp</a>
                         <a href="mailto:binomugishacom@gmail.com" class="btn">Send an Email</a>
                         <button class="btn btn-outline" id="viewPortfolioBtn">View More Work</button>
                     </div>
@@ -1549,7 +1607,7 @@
                 <h3 class="cta-title">Ready to Start Your Next Project?</h3>
                 <p class="cta-description">Let's create impactful stories together. Contact me to discuss your documentary, photography, livestream, or media strategy needs and how we can bring your vision to life.</p>
                 <div class="cta-buttons">
-                    <a href="https://wa.me/256756180429" class="btn btn-whatsapp" target="_blank">Chat on WhatsApp</a>
+                    <a href="https://wa.me/256756180429" class="btn btn-whatsapp" target="_blank" rel="noopener noreferrer">Chat on WhatsApp</a>
                     <a href="mailto:binomugishacom@gmail.com" class="btn">Send an Email</a>
                     <button class="btn btn-outline" id="viewWorkContactBtn">View My Work</button>
                 </div>
@@ -1558,7 +1616,7 @@
     </div>
     
     <!-- WhatsApp Floating Button -->
-    <a href="https://wa.me/256756180429" class="whatsapp-float" target="_blank">
+    <a href="https://wa.me/256756180429" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
         💬
         <span class="whatsapp-tooltip">Chat with us on WhatsApp!</span>
     </a>
@@ -1568,10 +1626,10 @@
         <div class="footer-content">
             <div class="logo">BINOMUGISHA</div>
             <div class="social-links">
-                <a href="#" class="social-link">📘</a>
-                <a href="#" class="social-link">🐦</a>
-                <a href="#" class="social-link">📷</a>
-                <a href="#" class="social-link">💼</a>
+                <a href="#" class="social-link" aria-label="Facebook">📘</a>
+                <a href="#" class="social-link" aria-label="Twitter">🐦</a>
+                <a href="#" class="social-link" aria-label="Instagram">📷</a>
+                <a href="https://www.linkedin.com/in/binomugisha/" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">💼</a>
             </div>
             <div class="copyright">
                 &copy; <span id="currentYear">2025</span> BINOMUGISHA. All rights reserved. | African Stories, Global Impact
@@ -1862,41 +1920,6 @@
             mobileNavDropdown.addEventListener('click', function(e) {
                 e.stopPropagation();
             });
-            
-            // Form submission handling
-            const contactForm = document.getElementById('contactForm');
-            if (contactForm) {
-                contactForm.addEventListener('submit', function(e) {
-                    e.preventDefault();
-                    
-                    const submitBtn = this.querySelector('button[type="submit"]');
-                    const originalText = submitBtn.textContent;
-                    
-                    // Show loading state
-                    submitBtn.textContent = 'Sending...';
-                    submitBtn.disabled = true;
-                    
-                    // Create a temporary iframe for form submission
-                    const iframe = document.createElement('iframe');
-                    iframe.name = 'formsubmit-target';
-                    iframe.style.display = 'none';
-                    document.body.appendChild(iframe);
-                    
-                    this.target = 'formsubmit-target';
-                    
-                    // Set timeout to handle potential connection issues
-                    const timeout = setTimeout(() => {
-                        alert('Message sent successfully! We\'ll get back to you soon.');
-                        submitBtn.textContent = originalText;
-                        submitBtn.disabled = false;
-                        document.body.removeChild(iframe);
-                        this.reset();
-                    }, 3000);
-                    
-                    // Submit the form
-                    this.submit();
-                });
-            }
         });
     </script>
 </body>
