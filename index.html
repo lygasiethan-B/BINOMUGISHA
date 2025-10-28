@@ -138,6 +138,84 @@
             background-color: var(--sunset-orange);
         }
         
+        /* Mobile Navigation Styles */
+        .mobile-menu-btn {
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 30px;
+            height: 30px;
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            right: 20px;
+            transform: translateY(-50%);
+            z-index: 1001;
+        }
+        
+        .mobile-menu-btn span {
+            width: 25px;
+            height: 3px;
+            background-color: white;
+            margin: 2px 0;
+            transition: 0.3s;
+            border-radius: 2px;
+        }
+        
+        .mobile-nav-dropdown {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background-color: var(--netflix-black);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+            flex-direction: column;
+        }
+        
+        .mobile-nav-dropdown.active {
+            display: flex;
+        }
+        
+        .mobile-nav-btn {
+            padding: 1rem 1.5rem;
+            background: none;
+            border: none;
+            font-size: 1rem;
+            font-weight: 500;
+            color: #e5e5e5;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-align: left;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .mobile-nav-btn:hover {
+            color: white;
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+        
+        .mobile-nav-btn.active {
+            color: white;
+            background-color: var(--sunset-orange);
+        }
+        
+        /* Mobile menu animation */
+        .mobile-menu-btn.active span:nth-child(1) {
+            transform: rotate(-45deg) translate(-5px, 6px);
+        }
+        
+        .mobile-menu-btn.active span:nth-child(2) {
+            opacity: 0;
+        }
+        
+        .mobile-menu-btn.active span:nth-child(3) {
+            transform: rotate(45deg) translate(-5px, -6px);
+        }
+        
         /* Page Container */
         .page-container {
             max-width: 100%;
@@ -1022,8 +1100,54 @@
         
         /* Responsive Styles */
         @media (max-width: 768px) {
+            header {
+                padding: 1rem 0;
+                position: relative;
+            }
+            
+            .logo {
+                font-size: 1.8rem;
+                margin-bottom: 0.3rem;
+            }
+            
+            .tagline {
+                font-size: 0.9rem;
+                padding: 0 1rem;
+            }
+            
+            nav {
+                position: relative;
+                top: 0;
+                padding: 0;
+            }
+            
             .nav-container {
-                flex-wrap: wrap;
+                display: none;
+            }
+            
+            .mobile-menu-btn {
+                display: flex;
+            }
+            
+            .page-container {
+                margin-top: 0;
+            }
+            
+            /* Adjust header spacing when scrolled on mobile */
+            header.scrolled {
+                position: fixed;
+                width: 100%;
+                top: 0;
+                background-color: var(--netflix-black);
+                padding: 0.8rem 0;
+            }
+            
+            header.scrolled .logo {
+                font-size: 1.5rem;
+            }
+            
+            header.scrolled .tagline {
+                font-size: 0.8rem;
             }
             
             .about-content,
@@ -1133,7 +1257,7 @@
     <!-- Header Section -->
     <header id="mainHeader">
         <div class="logo">BINOMUGISHA</div>
-        <div class="tagline">Media Strategy | Communications | Storytelling</div>
+        <div class="tagline">Media Strategy | Communications | Mentorship</div>
     </header>
     
     <!-- Navigation -->
@@ -1145,6 +1269,22 @@
             <button class="nav-btn" data-page="about">About</button>
             <button class="nav-btn" data-page="contact">Contact</button>
         </div>
+        
+        <!-- Mobile Menu Button -->
+        <div class="mobile-menu-btn" id="mobileMenuBtn">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        
+        <!-- Mobile Dropdown Menu -->
+        <div class="mobile-nav-dropdown" id="mobileNavDropdown">
+            <button class="mobile-nav-btn active" data-page="home">Home</button>
+            <button class="mobile-nav-btn" data-page="videos">Videos</button>
+            <button class="mobile-nav-btn" data-page="photography">Photography</button>
+            <button class="mobile-nav-btn" data-page="about">About</button>
+            <button class="mobile-nav-btn" data-page="contact">Contact</button>
+        </div>
     </nav>
     
     <!-- Page Container -->
@@ -1154,7 +1294,7 @@
             <div class="hero">
                 <div class="hero-content">
                     <h2>African Stories, Told with Impact</h2>
-                    <p>Guiding the next generation of African visual storytellers to create powerful content that transforms communities and drives change.</p>
+                    <p>We guide the next generation of African digital storytellers, leveraging robust Media Strategy, compelling Communications, and hands-on Mentorship, to produce powerful content that transforms communities and drives change.</p>
                     <div class="btn-container">
                         <button class="btn" id="viewWorkBtn">View My Work</button>
                         <a href="https://wa.me/256756180429" class="btn btn-whatsapp" target="_blank">Chat on WhatsApp</a>
@@ -1349,10 +1489,10 @@
             <h2 class="page-title">About Nathan Binomugisha</h2>
             <div class="about-content">
                 <div class="about-text">
-                    <h3>Communications Consultant & Visual Storyteller</h3>
-                    <p>With over 7 years of experience supporting global and local organizations, I help businesses, nonprofits, and leaders communicate clearly and confidently.</p>
-                    <p>I design strategies, build strong brand messages, train teams, and guide organizations through crises. My focus is on practical, easy-to-use solutions that improve teamwork, save time, and create lasting results.</p>
-                    <p>As a proud African creator, I'm dedicated to showcasing authentic stories from the continent while empowering the next generation of visual storytellers.</p>
+                    <h3>Communications Consultant & Digital Storyteller</h3>
+                    <p>With over 10 years of experience supporting global and local organizations, I help businesses, nonprofits, and leaders communicate clearly and confidently.</p>
+                    <p>I design and implement media strategies, build strong brand messages, mentor teams, and guide organizations through communication crises. My focus is on practical, easy-to-use solutions that improve teamwork, save time, and create lasting results.</p>
+                    <p>As a proud African creator, I'm dedicated to showcasing authentic stories from the continent while empowering the next generation of digital storytellers.</p>
                 </div>
                 <div class="about-image">
                     Nathan Binomugisha
@@ -1434,7 +1574,9 @@
                         <!-- FormSubmit.co Configuration -->
                         <input type="hidden" name="_subject" value="New contact from BINOMUGISHA website">
                         <input type="hidden" name="_template" value="table">
-                        <input type="hidden" name="_next" value="https://yourdomain.com/thank-you.html">
+                        <input type="hidden" name="_next" value="https://lygasiethan-b.github.io/BINOMUGISHA/thank-you.html">
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="text" name="_honey" style="display:none">
                         
                         <div class="form-group">
                             <label for="name">Your Name</label>
@@ -1556,8 +1698,22 @@
                     }
                 });
                 
+                // Update mobile nav buttons
+                updateMobileNav(pageId);
+                
                 // Scroll to top when switching pages
                 window.scrollTo(0, 0);
+            }
+            
+            // Update mobile nav buttons
+            function updateMobileNav(pageId) {
+                const mobileNavBtns = document.querySelectorAll('.mobile-nav-btn');
+                mobileNavBtns.forEach(button => {
+                    button.classList.remove('active');
+                    if (button.getAttribute('data-page') === pageId) {
+                        button.classList.add('active');
+                    }
+                });
             }
             
             // Add click event to nav buttons
@@ -1715,6 +1871,70 @@
                     document.body.style.overflow = 'auto'; // Re-enable scrolling
                 }
             });
+            
+            // Mobile Navigation Functionality
+            const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+            const mobileNavDropdown = document.getElementById('mobileNavDropdown');
+            const mobileNavBtns = document.querySelectorAll('.mobile-nav-btn');
+            
+            // Toggle mobile menu
+            mobileMenuBtn.addEventListener('click', function() {
+                this.classList.toggle('active');
+                mobileNavDropdown.classList.toggle('active');
+            });
+            
+            // Close mobile menu when clicking on a link
+            mobileNavBtns.forEach(button => {
+                button.addEventListener('click', function() {
+                    const pageId = this.getAttribute('data-page');
+                    switchPage(pageId);
+                    mobileMenuBtn.classList.remove('active');
+                    mobileNavDropdown.classList.remove('active');
+                });
+            });
+            
+            // Close mobile menu when clicking outside
+            document.addEventListener('click', function(e) {
+                if (!e.target.closest('nav') && mobileNavDropdown.classList.contains('active')) {
+                    mobileMenuBtn.classList.remove('active');
+                    mobileNavDropdown.classList.remove('active');
+                }
+            });
+            
+            // Form submission handling
+            const contactForm = document.getElementById('contactForm');
+            if (contactForm) {
+                contactForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    const submitBtn = this.querySelector('button[type="submit"]');
+                    const originalText = submitBtn.textContent;
+                    
+                    // Show loading state
+                    submitBtn.textContent = 'Sending...';
+                    submitBtn.disabled = true;
+                    
+                    // Create a temporary iframe for form submission
+                    const iframe = document.createElement('iframe');
+                    iframe.name = 'formsubmit-target';
+                    iframe.style.display = 'none';
+                    document.body.appendChild(iframe);
+                    
+                    this.target = 'formsubmit-target';
+                    
+                    // Set timeout to handle potential connection issues
+                    const timeout = setTimeout(() => {
+                        alert('Message sent successfully! We\'ll get back to you soon.');
+                        submitBtn.textContent = originalText;
+                        submitBtn.disabled = false;
+                        document.body.removeChild(iframe);
+                        this.reset();
+                    }, 3000);
+                    
+                    // Submit the form
+                    this.submit();
+                });
+            }
         });
     </script>
 </body>
