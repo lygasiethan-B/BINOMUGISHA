@@ -2,13 +2,13 @@
 <html lang="en">
 <head>
     <!-- Google tag (gtag.js) -->
-     <script async src="https://www.googletagmanager.com/gtag/js?id=G-8PGW26EBE2"></script>
-     <script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-8PGW26EBE2"></script>
+    <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
       gtag('config', 'G-8PGW26EBE2');
-     </script>
+    </script>
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -24,7 +24,7 @@
     <meta name="robots" content="index, follow">
 
     <!-- Canonical URL -->
-    <link rel="canonical" href="https://lygasiethan-b.github.io/BINOMUGISHA/">
+    <link rel="canonical" href="https://binomugisha.org/">
 
     <!-- Sitemap -->
     <link rel="sitemap" type="application/xml" href="/sitemap.xml">
@@ -36,15 +36,19 @@
     <meta property="og:title" content="BINOMUGISHA | Video Production & Photography | African Storytelling">
     <meta property="og:description" content="Award-winning African visual storyteller creating impactful documentaries and visual content across Uganda">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://lygasiethan-b.github.io/BINOMUGISHA/">
+    <meta property="og:url" content="https://binomugisha.org/">
     <meta property="og:image" content="https://via.placeholder.com/1200x630/E25822/FFFFFF?text=BINOMUGISHA">
     <meta property="og:site_name" content="BINOMUGISHA">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="BINOMUGISHA | Video Production & Photography">
     <meta name="twitter:description" content="African visual storyteller creating impactful documentaries">
     <meta name="twitter:image" content="https://via.placeholder.com/1200x630/E25822/FFFFFF?text=BINOMUGISHA">
+    <meta name="twitter:site" content="@Nbinomugisha">
     
     <!-- Structured Data -->
     <script type="application/ld+json">
@@ -54,9 +58,11 @@
       "name": "Nathan Binomugisha",
       "jobTitle": "Video Producer & Photographer",
       "description": "African visual storyteller creating impactful documentaries and visual content across Uganda",
-      "url": "https://lygasiethan-b.github.io/BINOMUGISHA/",
+      "url": "https://binomugisha.org/",
       "sameAs": [
-        "https://www.linkedin.com/in/binomugisha/"
+        "https://www.linkedin.com/in/binomugisha/",
+        "https://video.binomugisha.org",
+        "https://twitter.com/Nbinomugisha"
       ],
       "knowsAbout": [
         "Video Production",
@@ -70,6 +76,35 @@
         "@type": "Organization",
         "name": "BINOMUGISHA Media"
       }
+    }
+    </script>
+
+    <!-- Local Business Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "BINOMUGISHA",
+      "description": "Professional video production and photography services in Uganda",
+      "url": "https://binomugisha.org/",
+      "telephone": "+256756180429",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Kampala",
+        "addressCountry": "Uganda"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "0.3476",
+        "longitude": "32.5825"
+      },
+      "openingHours": "Mo-Fr 09:00-18:00",
+      "areaServed": ["Uganda", "East Africa"],
+      "sameAs": [
+        "https://www.linkedin.com/in/binomugisha/",
+        "https://video.binomugisha.org",
+        "https://twitter.com/Nbinomugisha"
+      ]
     }
     </script>
     
@@ -418,221 +453,42 @@
             color: #b3b3b3;
         }
         
-        /* NETFLIX-STYLE VIDEO PAGE */
-        #videos {
-            padding-bottom: 3rem;
+        /* Photography Page Styles */
+        #photography {
+            padding: 2rem 0 4rem;
+            position: relative;
         }
         
-        .video-hero {
+        .photography-hero {
             position: relative;
-            height: 70vh;
+            height: 50vh;
             display: flex;
-            align-items: flex-end;
-            padding: 0 4% 4%;
+            align-items: center;
+            padding: 0 4%;
             margin-bottom: 2rem;
-            background: linear-gradient(to top, var(--netflix-black) 0%, transparent 50%), 
+            background: linear-gradient(to right, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.4) 50%, rgba(0,0,0,0.8) 100%), 
                         url('https://images.unsplash.com/photo-1518638150340-f706e86654de?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1167&q=80');
             background-size: cover;
             background-position: center;
         }
         
-        .video-hero-content {
+        .photography-hero-content {
             max-width: 600px;
         }
         
-        .video-hero h2 {
+        .photography-hero h2 {
             font-size: 3rem;
             margin-bottom: 1rem;
             color: white;
             font-weight: 700;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
         }
         
-        .video-hero p {
+        .photography-hero p {
             font-size: 1.2rem;
             margin-bottom: 1.5rem;
             color: #e5e5e5;
-        }
-        
-        .video-category {
-            margin-bottom: 3rem;
-            padding: 0 4%;
-        }
-        
-        .category-title {
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-            color: white;
-            font-weight: 600;
-        }
-        
-        .video-row {
-            display: flex;
-            overflow-x: auto;
-            overflow-y: hidden;
-            padding: 1rem 0;
-            scrollbar-width: none; /* Firefox */
-            -ms-overflow-style: none; /* IE and Edge */
-        }
-        
-        .video-row::-webkit-scrollbar {
-            display: none; /* Chrome, Safari and Opera */
-        }
-        
-        .video-item {
-            flex: 0 0 auto;
-            width: 300px;
-            margin-right: 10px;
-            border-radius: 4px;
-            overflow: hidden;
-            transition: transform 0.3s ease;
-            position: relative;
-            cursor: pointer;
-        }
-        
-        .video-item:hover {
-            transform: scale(1.05);
-            z-index: 10;
-        }
-        
-        .video-item img {
-            width: 100%;
-            height: 169px; /* 16:9 aspect ratio */
-            object-fit: cover;
-            display: block;
-        }
-        
-        .video-info {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, transparent 100%);
-            padding: 1rem;
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
-        
-        .video-item:hover .video-info {
-            opacity: 1;
-        }
-        
-        .video-info h3 {
-            font-size: 1.1rem;
-            margin-bottom: 0.5rem;
-            color: white;
-            font-weight: 600;
-        }
-        
-        .video-info p {
-            font-size: 0.9rem;
-            color: #b3b3b3;
-        }
-        
-        .view-count {
-            display: flex;
-            align-items: center;
-            margin-top: 0.5rem;
-            font-size: 0.8rem;
-            color: #b3b3b3;
-        }
-        
-        .view-count::before {
-            content: '👁️';
-            margin-right: 5px;
-        }
-        
-        /* Video Modal */
-        .video-modal {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.9);
-            z-index: 2000;
-            justify-content: center;
-            align-items: center;
-        }
-        
-        .video-modal.active {
-            display: flex;
-        }
-        
-        .modal-content {
-            width: 90%;
-            max-width: 1000px;
-            background: var(--netflix-dark-gray);
-            border-radius: 8px;
-            padding: 20px;
-            position: relative;
-        }
-        
-        .close-modal {
-            position: absolute;
-            top: 15px;
-            right: 15px;
-            font-size: 2rem;
-            cursor: pointer;
-            color: white;
-            background: rgba(0,0,0,0.5);
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            z-index: 10;
-        }
-        
-        .video-container {
-            position: relative;
-            padding-bottom: 56.25%; /* 16:9 aspect ratio */
-            height: 0;
-            overflow: hidden;
-            border-radius: 4px;
-        }
-        
-        .video-container video {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border: none;
-        }
-        
-        .modal-video-info {
-            padding: 1rem 0;
-        }
-        
-        .modal-video-info h3 {
-            font-size: 1.5rem;
-            margin-bottom: 0.5rem;
-            color: white;
-        }
-        
-        .modal-video-info p {
-            color: #b3b3b3;
-            font-size: 1rem;
-        }
-        
-        .modal-view-count {
-            display: flex;
-            align-items: center;
-            margin-top: 0.5rem;
-            font-size: 0.9rem;
-            color: #b3b3b3;
-        }
-        
-        .modal-view-count::before {
-            content: '👁️';
-            margin-right: 5px;
-        }
-        
-        /* Photography Page Styles */
-        #photography {
-            padding: 2rem 4% 4rem;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
         }
         
         .page-content {
@@ -1045,13 +901,47 @@
         
         /* Contact Page Styles */
         #contact {
-            padding: 2rem 4% 4rem;
+            padding: 2rem 0 4rem;
+            position: relative;
+        }
+        
+        .contact-hero {
+            position: relative;
+            height: 50vh;
+            display: flex;
+            align-items: center;
+            padding: 0 4%;
+            margin-bottom: 2rem;
+            background: linear-gradient(to right, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.4) 50%, rgba(0,0,0,0.8) 100%), 
+                        url('https://images.unsplash.com/photo-1518638150340-f706e86654de?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1167&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .contact-hero-content {
+            max-width: 600px;
+        }
+        
+        .contact-hero h2 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: white;
+            font-weight: 700;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        
+        .contact-hero p {
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+            color: #e5e5e5;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
         }
         
         .contact-container {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 3rem;
+            padding: 0 4%;
         }
         
         .contact-info h3 {
@@ -1121,6 +1011,27 @@
             resize: vertical;
         }
         
+        /* Form result message styles */
+        .form-result {
+            display: none;
+            margin-top: 1rem;
+            padding: 1rem;
+            border-radius: 4px;
+            font-weight: 500;
+        }
+        
+        .form-result.success {
+            background-color: rgba(34, 197, 94, 0.1);
+            border: 1px solid rgba(34, 197, 94, 0.3);
+            color: #22c55e;
+        }
+        
+        .form-result.error {
+            background-color: rgba(239, 68, 68, 0.1);
+            border: 1px solid rgba(239, 68, 68, 0.3);
+            color: #ef4444;
+        }
+        
         /* Footer Styles */
         footer {
             background-color: var(--netflix-dark-gray);
@@ -1151,6 +1062,24 @@
         }
         
         .social-link:hover {
+            color: var(--sunset-orange);
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin: 1.5rem 0;
+            flex-wrap: wrap;
+        }
+        
+        .footer-link {
+            color: #b3b3b3;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-link:hover {
             color: var(--sunset-orange);
         }
         
@@ -1227,8 +1156,13 @@
                 font-size: 2.5rem;
             }
             
-            .video-hero h2 {
+            .photography-hero h2,
+            .contact-hero h2 {
                 font-size: 2rem;
+            }
+            
+            .page-content {
+                padding: 0 4%;
             }
             
             .timeline::after {
@@ -1254,10 +1188,6 @@
             .btn {
                 margin-right: 0;
                 margin-bottom: 10px;
-            }
-            
-            .video-item {
-                width: 250px;
             }
             
             .wedding-books {
@@ -1288,6 +1218,11 @@
             .whatsapp-tooltip {
                 display: none;
             }
+            
+            .footer-links {
+                flex-direction: column;
+                gap: 1rem;
+            }
         }
         
         @media (max-width: 480px) {
@@ -1295,12 +1230,9 @@
                 font-size: 2rem;
             }
             
-            .video-hero h2 {
+            .photography-hero h2,
+            .contact-hero h2 {
                 font-size: 1.8rem;
-            }
-            
-            .video-item {
-                width: 200px;
             }
             
             .page-title {
@@ -1332,7 +1264,6 @@
     <nav aria-label="Main navigation">
         <div class="nav-container">
             <button class="nav-btn active" data-page="home" aria-current="page">Home</button>
-            <button class="nav-btn" data-page="videos">Videos</button>
             <button class="nav-btn" data-page="photography">Photography</button>
             <button class="nav-btn" data-page="about">About</button>
             <button class="nav-btn" data-page="contact">Contact</button>
@@ -1348,7 +1279,6 @@
         <!-- Mobile Dropdown Menu -->
         <div class="mobile-nav-dropdown" id="mobileNavDropdown">
             <button class="mobile-nav-btn active" data-page="home" aria-current="page">Home</button>
-            <button class="mobile-nav-btn" data-page="videos">Videos</button>
             <button class="mobile-nav-btn" data-page="photography">Photography</button>
             <button class="mobile-nav-btn" data-page="about">About</button>
             <button class="mobile-nav-btn" data-page="contact">Contact</button>
@@ -1363,7 +1293,7 @@
                 <div class="hero-content">
                     <p>We guide the next generation of African digital storytellers, leveraging robust Media Strategy, compelling Communications, and hands-on Mentorship, to produce powerful content that transforms communities and drives change.</p>
                     <div class="btn-container">
-                        <button class="btn" id="viewWorkBtn">View My Work</button>
+                        <a href="https://video.binomugisha.org" class="btn" target="_blank" rel="noopener noreferrer">View My Work</a>
                         <a href="https://wa.me/256756180429" class="btn btn-whatsapp" target="_blank" rel="noopener noreferrer">Chat on WhatsApp</a>
                         <button class="btn btn-outline" id="learnMoreBtn">Learn More</button>
                     </div>
@@ -1390,64 +1320,16 @@
             </div>
         </section>
         
-        <!-- Videos Page -->
-        <section id="videos" class="page">
-            <div class="video-hero">
-                <div class="video-hero-content">
-                    <h2>Documentaries & Video Work</h2>
-                    <p>Explore my collection of short documentaries and video projects that showcase African stories with impact and authenticity.</p>
-                    <button class="btn" id="playFeatured">Play Featured</button>
+        <!-- Photography Page -->
+        <section id="photography" class="page">
+            <div class="photography-hero">
+                <div class="photography-hero-content">
+                    <h2>Photography Portfolio</h2>
+                    <p>Specializing in wedding photography that captures the unique beauty, emotion, and cultural richness of celebrations across Uganda.</p>
                 </div>
             </div>
             
-            <!-- Documentaries Row -->
-            <div class="video-category">
-                <h3 class="category-title">Documentaries</h3>
-                <div class="video-row">
-                    <!-- Going Deeper for Gender Justice -->
-                    <div class="video-item" data-video-url="https://usc1.contabostorage.com/8593ef8d2b4a4502873a1044362667fb:videos/documentaries/Going Deeper For Gender Justice Documentary V4a-1.m4v" data-video-title="Going Deeper for Gender Justice" data-video-desc="A documentary exploring gender justice initiatives and their impact on communities in Uganda.">
-                        <img src="https://usc1.contabostorage.com/8593ef8d2b4a4502873a1044362667fb:videos/documentaries/thumbnail-gooing deeper for Gender Justice.jpg" alt="Going Deeper for Gender Justice Documentary - African storytelling Uganda" loading="lazy">
-                        <div class="video-info">
-                            <h3>Going Deeper for Gender Justice</h3>
-                            <p>A documentary exploring gender justice initiatives and their impact on communities in Uganda.</p>
-                            <div class="view-count" id="viewCount1">0 views</div>
-                        </div>
-                    </div>
-                    
-                    <!-- 10 Years of Impact -->
-                    <div class="video-item" data-video-url="https://usc1.contabostorage.com/8593ef8d2b4a4502873a1044362667fb:videos/documentaries/10 Years of Self-Help Group Impact in Uganda's Nebbi & Teso Regions.mp4" data-video-title="10 Years of Impact" data-video-desc="Documenting the transformative impact of self-help groups in Uganda's Nebbi and Teso regions over a decade.">
-                        <img src="https://usc1.contabostorage.com/8593ef8d2b4a4502873a1044362667fb:videos/documentaries/thumbnail-10-years-of-world-renew.jpg" alt="10 Years of Impact Documentary - Uganda development stories" loading="lazy">
-                        <div class="video-info">
-                            <h3>10 Years of Impact</h3>
-                            <p>Documenting the transformative impact of self-help groups in Uganda's Nebbi and Teso regions over a decade.</p>
-                            <div class="view-count" id="viewCount2">0 views</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        <!-- Video Modal -->
-        <div class="video-modal" id="videoModal">
-            <div class="modal-content">
-                <span class="close-modal" id="closeModal">&times;</span>
-                <div class="video-container">
-                    <video id="videoPlayer" controls>
-                        Your browser does not support the video tag.
-                    </video>
-                </div>
-                <div class="modal-video-info">
-                    <h3 id="modalVideoTitle"></h3>
-                    <p id="modalVideoDesc"></p>
-                    <div class="modal-view-count" id="modalViewCount">0 views</div>
-                </div>
-            </div>
-        </div>
-        
-        <!-- Photography Page -->
-        <section id="photography" class="page">
-            <h2 class="page-title">Photography Portfolio</h2>
-            <p class="page-content">Specializing in wedding photography that captures the unique beauty, emotion, and cultural richness of celebrations across Uganda. Each photo book tells a complete story of love, tradition, and joy.</p>
+            <p class="page-content">Each photo book tells a complete story of love, tradition, and joy. Explore my collection of wedding photography that showcases the diversity and beauty of African celebrations.</p>
             
             <!-- Wedding Photo Books Section -->
             <div class="wedding-section">
@@ -1532,7 +1414,7 @@
                     <div class="cta-buttons">
                         <a href="https://wa.me/256756180429" class="btn btn-whatsapp" target="_blank" rel="noopener noreferrer">Chat on WhatsApp</a>
                         <a href="mailto:binomugishacom@gmail.com" class="btn">Send an Email</a>
-                        <button class="btn btn-outline" id="viewPortfolioBtn">View More Work</button>
+                        <a href="https://video.binomugisha.org" class="btn btn-outline" target="_blank" rel="noopener noreferrer">View Video Work</a>
                     </div>
                 </div>
             </div>
@@ -1603,12 +1485,97 @@
         
         <!-- Contact Page -->
         <section id="contact" class="page">
-            <h2 class="page-title">Get In Touch</h2>
+            <div class="contact-hero">
+                <div class="contact-hero-content">
+                    <h2>Get In Touch</h2>
+                    <p>Let's create something powerful together. Whether you need documentary production, photography, or media strategy, I'd love to discuss how we can work together.</p>
+                </div>
+            </div>
             
             <div class="contact-container">
                 <div class="contact-info">
                     <h3>Let's Create Something Powerful Together</h3>
                     <p>Whether you need short or long form documentary and film production, photography services, livestream, media strategic planning, communications or mentorship for your team, I'd love to discuss how we can work together to tell impactful African stories.</p>
+                    
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-icon">📧</div>
+                            <div>
+                                <strong>Email</strong><br>
+                                <a href="mailto:binomugishacom@gmail.com" style="color: #b3b3b3; text-decoration: none;">binomugishacom@gmail.com</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">📱</div>
+                            <div>
+                                <strong>WhatsApp</strong><br>
+                                <a href="https://wa.me/256756180429" style="color: #b3b3b3; text-decoration: none;">+256 756 180429</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">📍</div>
+                            <div>
+                                <strong>Location</strong><br>
+                                Kampala, Uganda
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <!-- Web3Forms Integration -->
+                    <form id="contactForm" action="https://api.web3forms.com/submit" method="POST">
+                        <!-- Your Web3Forms Access Key -->
+                        <input type="hidden" name="access_key" value="9ce26fff-f98c-4fa2-9f2a-7bb1a3cfb231">
+                        
+                        <!-- Optional but recommended hidden fields -->
+                        <input type="hidden" name="subject" value="New Contact Form Submission - BINOMUGISHA Website">
+                        <input type="hidden" name="from_name" value="BINOMUGISHA Website">
+                        <input type="hidden" name="replyto" value="auto">
+                        
+                        <!-- Form fields -->
+                        <div class="form-group">
+                            <label for="name">Your Name *</label>
+                            <input type="text" id="name" name="name" class="form-control" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" class="form-control" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="service">Service Interested In</label>
+                            <select id="service" name="service" class="form-control">
+                                <option value="">Select a service...</option>
+                                <option value="video-production">Video Production</option>
+                                <option value="photography">Photography</option>
+                                <option value="media-strategy">Media Strategy</option>
+                                <option value="communications">Communications Consulting</option>
+                                <option value="mentorship">Mentorship/Training</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Your Message *</label>
+                            <textarea id="message" name="message" class="form-control" rows="5" placeholder="Tell me about your project..." required></textarea>
+                        </div>
+                        
+                        <!-- Honeypot spam protection -->
+                        <input type="checkbox" name="botcheck" style="display: none;">
+                        
+                        <!-- Submit button -->
+                        <button type="submit" class="btn">
+                            <span class="btn-text">Send Message</span>
+                            <span class="btn-loading" style="display: none;">Sending...</span>
+                        </button>
+                        
+                        <!-- Success/Error message -->
+                        <div id="form-result" class="form-result"></div>
+                    </form>
+                </div>
+            </div>
 
             <!-- Call to Action Section - Matching Photography Page -->
             <div class="cta-section">
@@ -1617,7 +1584,7 @@
                 <div class="cta-buttons">
                     <a href="https://wa.me/256756180429" class="btn btn-whatsapp" target="_blank" rel="noopener noreferrer">Chat on WhatsApp</a>
                     <a href="mailto:binomugishacom@gmail.com" class="btn">Send an Email</a>
-                    <button class="btn btn-outline" id="viewWorkContactBtn">View My Work</button>
+                    <a href="https://video.binomugisha.org" class="btn btn-outline" target="_blank" rel="noopener noreferrer">View Video Work</a>
                 </div>
             </div>
         </section>
@@ -1635,6 +1602,11 @@
             <div class="logo">BINOMUGISHA</div>
             <div class="social-links">
                 <a href="https://www.linkedin.com/in/binomugisha/" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">💼 Connect on LinkedIn</a>
+            </div>
+            <div class="footer-links">
+                <a href="https://video.binomugisha.org" class="footer-link" target="_blank" rel="noopener noreferrer">Video Portfolio</a>
+                <a href="mailto:binomugishacom@gmail.com" class="footer-link">Email</a>
+                <a href="https://wa.me/256756180429" class="footer-link" target="_blank" rel="noopener noreferrer">WhatsApp</a>
             </div>
             <div class="copyright">
                 &copy; <span id="currentYear"></span> BINOMUGISHA. All rights reserved. | African Stories, Helping Brands Tell their Stories with Impact.
@@ -1656,46 +1628,8 @@
             }
         });
         
-        // View tracking system
-        const viewCounts = {
-            'Going Deeper for Gender Justice': 0,
-            '10 Years of Impact': 0
-        };
-        
-        // Load view counts from localStorage
-        function loadViewCounts() {
-            const savedCounts = localStorage.getItem('videoViewCounts');
-            if (savedCounts) {
-                Object.assign(viewCounts, JSON.parse(savedCounts));
-            }
-            updateViewCounts();
-        }
-        
-        // Save view counts to localStorage
-        function saveViewCounts() {
-            localStorage.setItem('videoViewCounts', JSON.stringify(viewCounts));
-        }
-        
-        // Update view count displays
-        function updateViewCounts() {
-            document.getElementById('viewCount1').textContent = `${viewCounts['Going Deeper for Gender Justice']} views`;
-            document.getElementById('viewCount2').textContent = `${viewCounts['10 Years of Impact']} views`;
-        }
-        
-        // Increment view count for a video
-        function incrementViewCount(videoTitle) {
-            if (viewCounts.hasOwnProperty(videoTitle)) {
-                viewCounts[videoTitle]++;
-                saveViewCounts();
-                updateViewCounts();
-            }
-        }
-        
         // Page navigation functionality
         document.addEventListener('DOMContentLoaded', function() {
-            // Load view counts when page loads
-            loadViewCounts();
-            
             const navButtons = document.querySelectorAll('.nav-btn');
             const pages = document.querySelectorAll('.page');
             const mobileNavBtns = document.querySelectorAll('.mobile-nav-btn');
@@ -1738,14 +1672,6 @@
                 });
             });
             
-            // "View My Work" button on home page
-            const viewWorkBtn = document.getElementById('viewWorkBtn');
-            if (viewWorkBtn) {
-                viewWorkBtn.addEventListener('click', function() {
-                    switchPage('videos');
-                });
-            }
-            
             // "Learn More" button on home page
             const learnMoreBtn = document.getElementById('learnMoreBtn');
             if (learnMoreBtn) {
@@ -1753,97 +1679,6 @@
                     switchPage('about');
                 });
             }
-            
-            // "View Portfolio" button on photography page
-            const viewPortfolioBtn = document.getElementById('viewPortfolioBtn');
-            if (viewPortfolioBtn) {
-                viewPortfolioBtn.addEventListener('click', function() {
-                    switchPage('videos');
-                });
-            }
-            
-            // "View My Work" button on contact page
-            const viewWorkContactBtn = document.getElementById('viewWorkContactBtn');
-            if (viewWorkContactBtn) {
-                viewWorkContactBtn.addEventListener('click', function() {
-                    switchPage('videos');
-                });
-            }
-            
-            // "Play Featured" button on video page
-            const playFeaturedBtn = document.getElementById('playFeatured');
-            if (playFeaturedBtn) {
-                playFeaturedBtn.addEventListener('click', function() {
-                    openVideoModal(
-                        'https://usc1.contabostorage.com/8593ef8d2b4a4502873a1044362667fb:videos/documentaries/Going Deeper For Gender Justice Documentary V4a-1.m4v', 
-                        'Going Deeper for Gender Justice', 
-                        'A documentary exploring gender justice initiatives and their impact on communities in Uganda.'
-                    );
-                });
-            }
-            
-            // Video modal functionality
-            const videoModal = document.getElementById('videoModal');
-            const closeModal = document.getElementById('closeModal');
-            const videoPlayer = document.getElementById('videoPlayer');
-            const modalVideoTitle = document.getElementById('modalVideoTitle');
-            const modalVideoDesc = document.getElementById('modalVideoDesc');
-            const modalViewCount = document.getElementById('modalViewCount');
-            const videoItems = document.querySelectorAll('.video-item');
-            
-            // Function to open video modal
-            function openVideoModal(videoUrl, title, description) {
-                videoPlayer.src = videoUrl;
-                modalVideoTitle.textContent = title;
-                modalVideoDesc.textContent = description;
-                modalViewCount.textContent = `${viewCounts[title]} views`;
-                videoModal.classList.add('active');
-                document.body.style.overflow = 'hidden'; // Prevent scrolling
-                
-                // Increment view count when video starts playing
-                videoPlayer.onplay = function() {
-                    incrementViewCount(title);
-                    modalViewCount.textContent = `${viewCounts[title]} views`;
-                };
-            }
-            
-            // Open video modal when clicking on video items
-            videoItems.forEach(item => {
-                item.addEventListener('click', function() {
-                    const videoUrl = this.getAttribute('data-video-url');
-                    const title = this.getAttribute('data-video-title');
-                    const description = this.getAttribute('data-video-desc');
-                    openVideoModal(videoUrl, title, description);
-                });
-            });
-            
-            // Close video modal
-            closeModal.addEventListener('click', function() {
-                videoModal.classList.remove('active');
-                videoPlayer.pause();
-                videoPlayer.src = '';
-                document.body.style.overflow = 'auto'; // Re-enable scrolling
-            });
-            
-            // Close modal when clicking outside
-            videoModal.addEventListener('click', function(e) {
-                if (e.target === videoModal) {
-                    videoModal.classList.remove('active');
-                    videoPlayer.pause();
-                    videoPlayer.src = '';
-                    document.body.style.overflow = 'auto'; // Re-enable scrolling
-                }
-            });
-            
-            // Close modal with Escape key
-            document.addEventListener('keydown', function(e) {
-                if (e.key === 'Escape' && videoModal.classList.contains('active')) {
-                    videoModal.classList.remove('active');
-                    videoPlayer.pause();
-                    videoPlayer.src = '';
-                    document.body.style.overflow = 'auto'; // Re-enable scrolling
-                }
-            });
             
             // Wedding Book Modal Functionality
             const bookModal = document.getElementById('bookModal');
@@ -1925,6 +1760,63 @@
             mobileNavDropdown.addEventListener('click', function(e) {
                 e.stopPropagation();
             });
+            
+            // Contact form handling with Web3Forms
+            const contactForm = document.getElementById('contactForm');
+            if (contactForm) {
+                contactForm.addEventListener('submit', async function(e) {
+                    e.preventDefault();
+                    
+                    const submitBtn = this.querySelector('button[type="submit"]');
+                    const btnText = submitBtn.querySelector('.btn-text');
+                    const btnLoading = submitBtn.querySelector('.btn-loading');
+                    const formResult = document.getElementById('form-result');
+                    
+                    // Show loading state
+                    btnText.style.display = 'none';
+                    btnLoading.style.display = 'inline';
+                    submitBtn.disabled = true;
+                    
+                    try {
+                        const formData = new FormData(this);
+                        
+                        const response = await fetch(this.action, {
+                            method: 'POST',
+                            body: formData,
+                            headers: {
+                                'Accept': 'application/json'
+                            }
+                        });
+                        
+                        const result = await response.json();
+                        
+                        if (response.ok && result.success) {
+                            // Success
+                            formResult.style.display = 'block';
+                            formResult.className = 'form-result success';
+                            formResult.innerHTML = '✅ Thank you for your message! I will get back to you within 24 hours.';
+                            
+                            // Reset form
+                            contactForm.reset();
+                        } else {
+                            throw new Error(result.message || 'Failed to send message');
+                        }
+                    } catch (error) {
+                        // Error
+                        formResult.style.display = 'block';
+                        formResult.className = 'form-result error';
+                        formResult.innerHTML = '❌ Sorry, there was an error sending your message. Please try again or email me directly at binomugishacom@gmail.com';
+                    } finally {
+                        // Reset button state
+                        btnText.style.display = 'inline';
+                        btnLoading.style.display = 'none';
+                        submitBtn.disabled = false;
+                        
+                        // Scroll to result message
+                        formResult.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                    }
+                });
+            }
         });
     </script>
 </body>
