@@ -899,6 +899,134 @@
             font-size: 0.9rem;
         }
         
+        /* FAQ Section Styles */
+        .faq-section {
+            margin-top: 3rem;
+            padding: 0 4%;
+        }
+        
+        .faq-section h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            color: white;
+            font-weight: 600;
+        }
+        
+        .faq-trigger {
+            background: var(--netflix-dark-gray);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: white;
+            padding: 1rem 1.5rem;
+            border-radius: 4px;
+            font-size: 1rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            text-align: left;
+        }
+        
+        .faq-trigger:hover {
+            background: rgba(255, 255, 255, 0.05);
+            border-color: var(--sunset-orange);
+        }
+        
+        .faq-trigger .icon {
+            font-size: 1.2rem;
+            transition: transform 0.3s ease;
+        }
+        
+        /* FAQ Modal Styles */
+        .faq-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.95);
+            z-index: 2000;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem;
+        }
+        
+        .faq-modal.active {
+            display: flex;
+        }
+        
+        .faq-modal-content {
+            width: 95%;
+            max-width: 800px;
+            max-height: 90vh;
+            background: var(--netflix-dark-gray);
+            border-radius: 8px;
+            overflow: hidden;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .faq-modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .faq-modal-title {
+            font-size: 1.5rem;
+            color: white;
+            font-weight: 600;
+        }
+        
+        .close-faq-modal {
+            font-size: 1.8rem;
+            cursor: pointer;
+            color: white;
+            background: rgba(0,0,0,0.5);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .faq-modal-body {
+            flex: 1;
+            overflow-y: auto;
+            padding: 1.5rem;
+        }
+        
+        .faq-item {
+            margin-bottom: 2rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding-bottom: 1.5rem;
+        }
+        
+        .faq-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+        }
+        
+        .faq-question {
+            font-size: 1.2rem;
+            color: white;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            line-height: 1.4;
+        }
+        
+        .faq-answer {
+            color: #b3b3b3;
+            line-height: 1.6;
+        }
+        
         /* Contact Page Styles */
         #contact {
             padding: 2rem 0 4rem;
@@ -954,6 +1082,7 @@
         .contact-info p {
             color: #b3b3b3;
             margin-bottom: 2rem;
+            line-height: 1.6;
         }
         
         .contact-details {
@@ -962,8 +1091,17 @@
         
         .contact-item {
             display: flex;
-            align-items: center;
-            margin-bottom: 1rem;
+            align-items: flex-start;
+            margin-bottom: 1.5rem;
+            padding: 1rem;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+        
+        .contact-item:hover {
+            background: rgba(255, 255, 255, 0.08);
+            transform: translateX(5px);
         }
         
         .contact-icon {
@@ -971,16 +1109,78 @@
             color: var(--sunset-orange);
             margin-right: 1rem;
             width: 30px;
+            flex-shrink: 0;
         }
         
+        .contact-item div {
+            flex: 1;
+        }
+        
+        .contact-item strong {
+            color: white;
+            font-weight: 600;
+            display: block;
+            margin-bottom: 0.3rem;
+        }
+        
+        .contact-item a {
+            color: #b3b3b3;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .contact-item a:hover {
+            color: var(--sunset-orange);
+        }
+        
+        /* Process Box Styles */
+        .process-box {
+            margin-top: 2rem;
+            padding: 1.5rem;
+            background: rgba(226, 88, 34, 0.1);
+            border-radius: 4px;
+            border-left: 4px solid var(--sunset-orange);
+        }
+        
+        .process-box h4 {
+            color: white;
+            margin-bottom: 1rem;
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+        
+        .process-box ul {
+            color: #b3b3b3;
+            padding-left: 1.5rem;
+        }
+        
+        .process-box li {
+            margin-bottom: 0.5rem;
+            line-height: 1.5;
+        }
+        
+        .process-box li:last-child {
+            margin-bottom: 0;
+        }
+        
+        /* Contact Form Styles */
         .contact-form {
             background: var(--netflix-dark-gray);
             padding: 2rem;
             border-radius: 4px;
+            border-top: 4px solid var(--sunset-orange);
+        }
+        
+        .contact-form h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            color: white;
+            font-weight: 600;
         }
         
         .form-group {
             margin-bottom: 1.5rem;
+            position: relative;
         }
         
         .form-group label {
@@ -996,19 +1196,40 @@
             border: 1px solid #404040;
             border-radius: 4px;
             font-size: 1rem;
-            transition: border 0.3s ease;
+            transition: all 0.3s ease;
             background-color: #2F2F2F;
             color: white;
+            font-family: 'Montserrat', sans-serif;
         }
         
         .form-control:focus {
             border-color: var(--sunset-orange);
             outline: none;
+            background-color: #3a3a3a;
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(226, 88, 34, 0.2);
         }
         
         textarea.form-control {
             min-height: 150px;
             resize: vertical;
+            line-height: 1.5;
+        }
+        
+        select.form-control {
+            cursor: pointer;
+            appearance: none;
+            background-image: url("data:image/svg+xml;charset=US-ASCII,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'><path fill='%23b3b3b3' d='M2 0L0 2h4zm0 5L0 3h4z'/></svg>");
+            background-repeat: no-repeat;
+            background-position: right 1rem center;
+            background-size: 0.65rem;
+            padding-right: 2.5rem;
+        }
+        
+        select.form-control option {
+            background-color: #2F2F2F;
+            color: white;
+            padding: 0.5rem;
         }
         
         /* Form result message styles */
@@ -1018,6 +1239,7 @@
             padding: 1rem;
             border-radius: 4px;
             font-weight: 500;
+            line-height: 1.5;
         }
         
         .form-result.success {
@@ -1030,6 +1252,21 @@
             background-color: rgba(239, 68, 68, 0.1);
             border: 1px solid rgba(239, 68, 68, 0.3);
             color: #ef4444;
+        }
+        
+        /* Button loading state */
+        .btn-loading {
+            display: none;
+        }
+        
+        .btn:disabled {
+            opacity: 0.7;
+            cursor: not-allowed;
+        }
+        
+        .btn:disabled:hover {
+            transform: none;
+            background-color: var(--sunset-orange);
         }
         
         /* Footer Styles */
@@ -1223,6 +1460,40 @@
                 flex-direction: column;
                 gap: 1rem;
             }
+            
+            .faq-modal-content {
+                height: 95vh;
+            }
+            
+            .faq-modal-body {
+                padding: 1rem;
+            }
+            
+            .faq-question {
+                font-size: 1.1rem;
+            }
+            
+            .contact-info h3 {
+                font-size: 1.5rem;
+            }
+            
+            .contact-form {
+                padding: 1.5rem;
+            }
+            
+            .contact-form h3 {
+                font-size: 1.3rem;
+            }
+            
+            .contact-item {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .contact-icon {
+                margin-right: 0;
+                margin-bottom: 0.5rem;
+            }
         }
         
         @media (max-width: 480px) {
@@ -1291,6 +1562,7 @@
         <section id="home" class="page active">
             <div class="hero">
                 <div class="hero-content">
+                    <h1>African Storytelling</h1>
                     <p>We guide the next generation of African digital storytellers, leveraging robust Media Strategy, compelling Communications, and hands-on Mentorship, to produce powerful content that transforms communities and drives change.</p>
                     <div class="btn-container">
                         <a href="https://video.binomugisha.org" class="btn" target="_blank" rel="noopener noreferrer">View My Work</a>
@@ -1481,48 +1753,127 @@
                     </div>
                 </div>
             </div>
+            
+            <!-- NEW FAQ SECTION -->
+            <div class="faq-section">
+                <h3>Common FAQs</h3>
+                <button class="faq-trigger" id="openFaqModal">
+                    View Frequently Asked Questions (FAQs)
+                    <span class="icon">❯</span>
+                </button>
+            </div>
         </section>
+        
+        <!-- FAQ Modal -->
+        <div class="faq-modal" id="faqModal">
+            <div class="faq-modal-content">
+                <div class="faq-modal-header">
+                    <h3 class="faq-modal-title">Frequently Asked Questions</h3>
+                    <span class="close-faq-modal" id="closeFaqModal">&times;</span>
+                </div>
+                <div class="faq-modal-body">
+                    <div class="faq-item">
+                        <h4 class="faq-question">How do you help organizations communicate better?</h4>
+                        <div class="faq-answer">
+                            <p>I help you find the right words and pictures to share what matters most. Think of me as a translator who takes your important work and makes it easy for everyone to understand - from partners, donors to community members.</p>
+                            <p>Whether you're trying to explain a complex project or share a success story, I'll help you tell it in a way that connects with people's hearts and minds.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <h4 class="faq-question">What makes your approach different?</h4>
+                        <div class="faq-answer">
+                            <p>I focus on listening first. Before I suggest any solutions, I take time to understand your unique situation, your audience, and what you're hoping to achieve.</p>
+                            <p>Instead of using complicated theories, I offer practical tools your team can actually use. It's like having a friendly guide who shows you the path rather than just pointing at the destination.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <h4 class="faq-question">How do you handle communication challenges?</h4>
+                        <div class="faq-answer">
+                            <p>When things get tricky - like when you need to share difficult news or correct misunderstandings - I help you find the kindest, clearest way forward.</p>
+                            <p>I've worked through many sensitive situations and know how to balance honesty with care. Think of me as someone who helps you have hard conversations while keeping relationships strong.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <h4 class="faq-question">What can I expect when we work together?</h4>
+                        <div class="faq-answer">
+                            <p>We'll start with a friendly conversation about your goals. Then I'll create a simple plan that shows exactly how we'll work together.</p>
+                            <p>You'll always know what's happening next, and I'll make sure everything we create feels authentic to your organization. It's a partnership where your voice stays at the center.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <h4 class="faq-question">How do you measure success?</h4>
+                        <div class="faq-answer">
+                            <p>Success looks different for everyone, so we'll define what matters most to you. It might be more people understanding your work, stronger relationships with donors, or your team feeling more confident about communication.</p>
+                            <p>I use simple ways to track progress so you can see the difference our work is making.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <h4 class="faq-question">What types of organizations do you work with?</h4>
+                        <div class="faq-answer">
+                            <p>I've worked with everyone from small community groups to large international organizations (INGOs). What matters isn't the size of your organization, but your commitment to making a difference.</p>
+                            <p>If you have a story that needs telling or a message that needs sharing, I'd love to help you do it in a way that truly connects with people.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         
         <!-- Contact Page -->
         <section id="contact" class="page">
             <div class="contact-hero">
                 <div class="contact-hero-content">
-                    <h2>Get In Touch</h2>
-                    <p>Let's create something powerful together. Whether you need documentary production, photography, or media strategy, I'd love to discuss how we can work together.</p>
+                    <h2>Let's Start Your Story</h2>
+                    <p>Every great project begins with a conversation. Share your vision, and let's explore how we can bring it to life together.</p>
                 </div>
             </div>
             
             <div class="contact-container">
                 <div class="contact-info">
-                    <h3>Let's Create Something Powerful Together</h3>
-                    <p>Whether you need short or long form documentary and film production, photography services, livestream, media strategic planning, communications or mentorship for your team, I'd love to discuss how we can work together to tell impactful African stories.</p>
+                    <h3>Your Vision, Our Collaboration</h3>
+                    <p>I believe the best stories emerge when we listen first. Whether you're launching a new initiative, celebrating a milestone, or navigating a communication challenge, I'm here to help you find the right approach.</p>
                     
                     <div class="contact-details">
                         <div class="contact-item">
                             <div class="contact-icon">📧</div>
                             <div>
-                                <strong>Email</strong><br>
-                                <a href="mailto:binomugishacom@gmail.com" style="color: #b3b3b3; text-decoration: none;">binomugishacom@gmail.com</a>
+                                <strong>Start the Conversation</strong>
+                                <a href="mailto:binomugishacom@gmail.com">binomugishacom@gmail.com</a>
                             </div>
                         </div>
                         <div class="contact-item">
                             <div class="contact-icon">📱</div>
                             <div>
-                                <strong>WhatsApp</strong><br>
-                                <a href="https://wa.me/256756180429" style="color: #b3b3b3; text-decoration: none;">+256 756 180429</a>
+                                <strong>Quick Questions</strong>
+                                <a href="https://wa.me/256756180429">+256 756 180429</a>
                             </div>
                         </div>
                         <div class="contact-item">
                             <div class="contact-icon">📍</div>
                             <div>
-                                <strong>Location</strong><br>
-                                Kampala, Uganda
+                                <strong>Based in Kampala</strong>
+                                Serving clients across Uganda and East Africa
                             </div>
                         </div>
+                    </div>
+                    
+                    <div class="process-box">
+                        <h4>What happens after you reach out?</h4>
+                        <ul>
+                            <li>We'll schedule a friendly chat to understand your goals</li>
+                            <li>I'll share initial ideas tailored to your specific needs</li>
+                            <li>You'll receive a clear plan with timelines and investment</li>
+                            <li>We begin creating something meaningful together</li>
+                        </ul>
                     </div>
                 </div>
                 
                 <div class="contact-form">
+                    <h3>Share Your Project Details</h3>
                     <!-- Web3Forms Integration -->
                     <form id="contactForm" action="https://api.web3forms.com/submit" method="POST">
                         <!-- Your Web3Forms Access Key -->
@@ -1545,21 +1896,22 @@
                         </div>
                         
                         <div class="form-group">
-                            <label for="service">Service Interested In</label>
+                            <label for="service">What brings you here today?</label>
                             <select id="service" name="service" class="form-control">
-                                <option value="">Select a service...</option>
-                                <option value="video-production">Video Production</option>
-                                <option value="photography">Photography</option>
-                                <option value="media-strategy">Media Strategy</option>
-                                <option value="communications">Communications Consulting</option>
-                                <option value="mentorship">Mentorship/Training</option>
-                                <option value="other">Other</option>
+                                <option value="">I'm interested in...</option>
+                                <option value="video-production">Video storytelling for our organization</option>
+                                <option value="photography">Photography for an event or project</option>
+                                <option value="media-strategy">Media strategy and planning</option>
+                                <option value="communications">Communications support</option>
+                                <option value="mentorship">Team training or mentorship</option>
+                                <option value="partnership">Exploring partnership opportunities</option>
+                                <option value="other">Something else</option>
                             </select>
                         </div>
                         
                         <div class="form-group">
-                            <label for="message">Your Message *</label>
-                            <textarea id="message" name="message" class="form-control" rows="5" placeholder="Tell me about your project..." required></textarea>
+                            <label for="message">Tell me about your project or challenge *</label>
+                            <textarea id="message" name="message" class="form-control" rows="5" placeholder="What story are you hoping to tell? What communication challenge are you facing? What would success look like for your project?" required></textarea>
                         </div>
                         
                         <!-- Honeypot spam protection -->
@@ -1567,7 +1919,7 @@
                         
                         <!-- Submit button -->
                         <button type="submit" class="btn">
-                            <span class="btn-text">Send Message</span>
+                            <span class="btn-text">Start Our Conversation</span>
                             <span class="btn-loading" style="display: none;">Sending...</span>
                         </button>
                         
@@ -1577,14 +1929,14 @@
                 </div>
             </div>
 
-            <!-- Call to Action Section - Matching Photography Page -->
+            <!-- Call to Action Section -->
             <div class="cta-section">
-                <h3 class="cta-title">Ready to Start Your Next Project?</h3>
-                <p class="cta-description">Let's create impactful stories together. Contact me to discuss your documentary, photography, livestream, or media strategy needs and how we can bring your vision to life.</p>
+                <h3 class="cta-title">Not Sure Where to Start?</h3>
+                <p class="cta-description">Sometimes the first step is the hardest. Let's have an informal chat about your ideas - no pressure, just possibilities. Every great partnership begins with a simple hello.</p>
                 <div class="cta-buttons">
-                    <a href="https://wa.me/256756180429" class="btn btn-whatsapp" target="_blank" rel="noopener noreferrer">Chat on WhatsApp</a>
-                    <a href="mailto:binomugishacom@gmail.com" class="btn">Send an Email</a>
-                    <a href="https://video.binomugisha.org" class="btn btn-outline" target="_blank" rel="noopener noreferrer">View Video Work</a>
+                    <a href="https://wa.me/256756180429" class="btn btn-whatsapp" target="_blank" rel="noopener noreferrer">Quick Chat on WhatsApp</a>
+                    <a href="mailto:binomugishacom@gmail.com" class="btn">Send Me an Email</a>
+                    <a href="#about" class="btn btn-outline" onclick="switchPage('about')">Learn More About My Work</a>
                 </div>
             </div>
         </section>
@@ -1605,6 +1957,7 @@
             </div>
             <div class="footer-links">
                 <a href="https://video.binomugisha.org" class="footer-link" target="_blank" rel="noopener noreferrer">Video Portfolio</a>
+                <a href="https://media.binomugisha.org" class="footer-link" target="_blank" rel="noopener noreferrer">Media Consultancy</a>
                 <a href="mailto:binomugishacom@gmail.com" class="footer-link">Email</a>
                 <a href="https://wa.me/256756180429" class="footer-link" target="_blank" rel="noopener noreferrer">WhatsApp</a>
             </div>
@@ -1817,6 +2170,45 @@
                     }
                 });
             }
+            
+            // FAQ Modal Functionality
+            const faqModal = document.getElementById('faqModal');
+            const openFaqModal = document.getElementById('openFaqModal');
+            const closeFaqModal = document.getElementById('closeFaqModal');
+            
+            // Open FAQ modal
+            if (openFaqModal) {
+                openFaqModal.addEventListener('click', function() {
+                    faqModal.classList.add('active');
+                    document.body.style.overflow = 'hidden'; // Prevent scrolling
+                });
+            }
+            
+            // Close FAQ modal
+            if (closeFaqModal) {
+                closeFaqModal.addEventListener('click', function() {
+                    faqModal.classList.remove('active');
+                    document.body.style.overflow = 'auto'; // Re-enable scrolling
+                });
+            }
+            
+            // Close FAQ modal when clicking outside
+            if (faqModal) {
+                faqModal.addEventListener('click', function(e) {
+                    if (e.target === faqModal) {
+                        faqModal.classList.remove('active');
+                        document.body.style.overflow = 'auto'; // Re-enable scrolling
+                    }
+                });
+            }
+            
+            // Close FAQ modal with Escape key
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape' && faqModal.classList.contains('active')) {
+                    faqModal.classList.remove('active');
+                    document.body.style.overflow = 'auto'; // Re-enable scrolling
+                }
+            });
         });
     </script>
 </body>
