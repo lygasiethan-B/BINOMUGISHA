@@ -379,11 +379,19 @@
             text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
         }
         
+        /* UPDATED: Button Container for Home Page */
+        .btn-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        
         .btn {
             display: inline-block;
             background-color: var(--sunset-orange);
             color: white;
-            padding: 0.8rem 1.8rem;
+            padding: 1rem 2rem;
             border-radius: 4px;
             text-decoration: none;
             font-weight: 600;
@@ -391,7 +399,8 @@
             border: none;
             cursor: pointer;
             font-size: 1.1rem;
-            margin-right: 1rem;
+            text-align: center;
+            min-width: 180px;
         }
         
         .btn:hover {
@@ -1416,15 +1425,19 @@
                 left: 0;
             }
             
+            /* UPDATED: Mobile Button Container */
             .btn-container {
-                display: flex;
                 flex-direction: column;
-                gap: 10px;
+                gap: 1rem;
             }
             
             .btn {
                 margin-right: 0;
-                margin-bottom: 10px;
+                margin-bottom: 0;
+                width: 100%;
+                max-width: 280px;
+                margin-left: auto;
+                margin-right: auto;
             }
             
             .wedding-books {
@@ -1564,10 +1577,11 @@
                 <div class="hero-content">
                     <h1>African Storytelling</h1>
                     <p>We guide the next generation of African digital storytellers, leveraging robust Media Strategy, compelling Communications, and hands-on Mentorship, to produce powerful content that transforms communities and drives change.</p>
+                    <!-- UPDATED: Button Container with Improved Spacing and Sizing -->
                     <div class="btn-container">
                         <a href="https://video.binomugisha.org" class="btn" target="_blank" rel="noopener noreferrer">View My Work</a>
-                        <a href="https://wa.me/256756180429" class="btn btn-whatsapp" target="_blank" rel="noopener noreferrer">Chat on WhatsApp</a>
                         <button class="btn btn-outline" id="learnMoreBtn">Learn More</button>
+                        <a href="https://wa.me/256756180429" class="btn btn-whatsapp" target="_blank" rel="noopener noreferrer">Chat on WhatsApp</a>
                     </div>
                 </div>
             </div>
@@ -1929,14 +1943,15 @@
                 </div>
             </div>
 
-            <!-- Call to Action Section -->
+            <!-- UPDATED: Call to Action Section with Learn More Button -->
             <div class="cta-section">
                 <h3 class="cta-title">Not Sure Where to Start?</h3>
                 <p class="cta-description">Sometimes the first step is the hardest. Let's have an informal chat about your ideas - no pressure, just possibilities. Every great partnership begins with a simple hello.</p>
                 <div class="cta-buttons">
                     <a href="https://wa.me/256756180429" class="btn btn-whatsapp" target="_blank" rel="noopener noreferrer">Quick Chat on WhatsApp</a>
                     <a href="mailto:binomugishacom@gmail.com" class="btn">Send Me an Email</a>
-                    <a href="#about" class="btn btn-outline" onclick="switchPage('about')">Learn More About My Work</a>
+                    <!-- UPDATED: Learn More About My Work Button -->
+                    <button class="btn btn-outline" onclick="switchPage('about')">Learn More About My Work</button>
                 </div>
             </div>
         </section>
@@ -1982,40 +1997,43 @@
         });
         
         // Page navigation functionality
+        function switchPage(pageId) {
+            const pages = document.querySelectorAll('.page');
+            const navButtons = document.querySelectorAll('.nav-btn');
+            const mobileNavBtns = document.querySelectorAll('.mobile-nav-btn');
+            
+            // Hide all pages
+            pages.forEach(page => {
+                page.classList.remove('active');
+            });
+            
+            // Show selected page
+            document.getElementById(pageId).classList.add('active');
+            
+            // Update active nav button
+            navButtons.forEach(button => {
+                button.classList.remove('active');
+                if (button.getAttribute('data-page') === pageId) {
+                    button.classList.add('active');
+                }
+            });
+            
+            // Update mobile nav buttons
+            mobileNavBtns.forEach(button => {
+                button.classList.remove('active');
+                if (button.getAttribute('data-page') === pageId) {
+                    button.classList.add('active');
+                }
+            });
+            
+            // Scroll to top when switching pages
+            window.scrollTo(0, 0);
+        }
+        
         document.addEventListener('DOMContentLoaded', function() {
             const navButtons = document.querySelectorAll('.nav-btn');
             const pages = document.querySelectorAll('.page');
             const mobileNavBtns = document.querySelectorAll('.mobile-nav-btn');
-            
-            // Function to switch pages
-            function switchPage(pageId) {
-                // Hide all pages
-                pages.forEach(page => {
-                    page.classList.remove('active');
-                });
-                
-                // Show selected page
-                document.getElementById(pageId).classList.add('active');
-                
-                // Update active nav button
-                navButtons.forEach(button => {
-                    button.classList.remove('active');
-                    if (button.getAttribute('data-page') === pageId) {
-                        button.classList.add('active');
-                    }
-                });
-                
-                // Update mobile nav buttons
-                mobileNavBtns.forEach(button => {
-                    button.classList.remove('active');
-                    if (button.getAttribute('data-page') === pageId) {
-                        button.classList.add('active');
-                    }
-                });
-                
-                // Scroll to top when switching pages
-                window.scrollTo(0, 0);
-            }
             
             // Add click event to nav buttons
             navButtons.forEach(button => {
